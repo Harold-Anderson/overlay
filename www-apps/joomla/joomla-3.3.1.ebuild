@@ -14,8 +14,8 @@ HOMEPAGE="http://www.joomla.org/"
 SRC_URI="http://joomlacode.org/gf/download/frsrelease/${MAGIC_1}/${MAGIC_2}/Joomla_${PV}-Stable-Full_Package.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="+json +mysql postgres zlib xml"
+KEYWORDS="~amd64"
+IUSE="+json +mysql postgres +zlib +xml"
 
 need_httpd_cgi
 need_php_httpd
