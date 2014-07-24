@@ -14,4 +14,7 @@
     <flag name='zlib'>.This is mandatory for<pkg>dev-lang/php</pkg></flag>
     <flag name='xml'>.This is mandatory for<pkg>dev-lang/php</pkg></flag>
   </use>
+  <upstream>
+    <doc lang="en">http://docs.joomla.org</doc>
+  </upstream>
 </pkgmetadata>
