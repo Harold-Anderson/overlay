@@ -1,8 +1,7 @@
 Du är nästan klar!
 
-  0. Skapa en databas (t.ex. MySQL:  
-                       http://www.gentoo.org/doc/en/mysql-howto.xml)
-    Alternativt får du använda postgres.
+  0. Se till att du har installerat och startat en databasserver, 
+     och att du har en användare som får skapa databaser.
 
   1. Surfa in på http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
      för att slutföra installationen.
