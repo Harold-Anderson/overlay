@@ -7,13 +7,6 @@
   <longdescription lang="en">
     Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications. 
   </longdescription>
-  <use>
-    <flag name='json'>This is mandatory for <pkg>dev-lang/php</pkg>.</flag>
-    <flag name='mysql'>Turns on support for mysql.</flag>
-    <flag name='postgres'>Turns on support for postgres.</flag>
-    <flag name='zlib'>.This is mandatory for<pkg>dev-lang/php</pkg></flag>
-    <flag name='xml'>.This is mandatory for<pkg>dev-lang/php</pkg></flag>
-  </use>
   <upstream>
     <doc lang="en">http://docs.joomla.org</doc>
   </upstream>
