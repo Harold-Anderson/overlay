@@ -15,7 +15,7 @@ SRC_URI="http://joomlacode.org/gf/download/frsrelease/${MAGIC_1}/${MAGIC_2}/Joom
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-#IUSE="+json +mysql +zlib +xml"
+IUSE="-mariadb"
 
 need_httpd_cgi
 need_php_httpd
@@ -24,8 +24,9 @@ S="${WORKDIR}"
 
 DEPEND="${DEPEND}
 	app-arch/unzip"
-RDEPEND="dev-lang/php[json,mysql,zlib,xml]
-	 >dev-db/mysql-5.1"
+RDEPEND=">=dev-lang/php-5.3.10[json,mysql,zlib,xml]
+	 !mariadb? ( >dev-db/mysql-5.1 )
+	 mariadb? ( >=dev-db/mariadb-5.2.14 )"
 
 src_install () {
 	webapp_src_preinst
