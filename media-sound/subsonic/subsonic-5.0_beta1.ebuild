@@ -2,9 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-MY_PV=5.0.beta1
+EAPI=5
 inherit eutils user
+inherit versionator
+
+MY_PV=$(replace_version_separator 2 '.' )
 
 DESCRIPTION="A free, open source, web-based media server in Java."
 HOMEPAGE="http://www.subsonic.org"
@@ -14,8 +16,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
-RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="virtual/jre
