@@ -3,7 +3,6 @@
 # $Header: $
 
 EAPI=5
-inherit eutils
 inherit webapp depend.php
 
 MAGIC_1="19524"
@@ -14,7 +13,7 @@ HOMEPAGE="http://www.joomla.org/"
 SRC_URI="http://joomlacode.org/gf/download/frsrelease/${MAGIC_1}/${MAGIC_2}/Joomla_${PV}-Stable-Full_Package.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~sparc ~ppc"
 IUSE="-mariadb"
 
 need_httpd_cgi
