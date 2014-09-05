@@ -14,18 +14,17 @@ SRC_URI="http://joomlacode.org/gf/download/frsrelease/${MAGIC_1}/${MAGIC_2}/Joom
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
-IUSE="-mariadb"
 
 need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}"
 
+IUSE="mysql postgres"
+
 DEPEND="${DEPEND}
 	app-arch/unzip"
-RDEPEND=">=dev-lang/php-5.3.10[json,mysql,zlib,xml]
-	 !mariadb? ( >dev-db/mysql-5.1 )
-	 mariadb? ( >=dev-db/mariadb-5.2.14 )"
+RDEPEND=">=dev-lang/php-5.3.10[json,mysql?,postgres?,zlib,xml]"
 
 src_install () {
 	webapp_src_preinst
