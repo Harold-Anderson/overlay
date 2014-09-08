@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>None</herd>
+<maintainer>
+<email>harold@alum.mit.edu</email>
+</maintainer>
 <description>OpenSSL with enable-ec_nistp_64_gcc_128 turned on.</description>
-<maintainer>harold@alum.mit.edu</maintainer>
 <use>
  <flag name='bindist'>Disable EC/RC5 algorithms (as they seem to be patented) -- note: changes the ABI</flag>
  <flag name='rfc3779'>Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)</flag>
