@@ -15,7 +15,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="openssl"
 SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib"
+IUSE="+nist bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib"
 
 # The blocks are temporary just to make sure people upgrade to a
 # version that lack runtime version checking.  We'll drop them in
@@ -128,11 +128,12 @@ multilib_src_configure() {
 	# See if our toolchain supports __uint128_t.  If so, it's 64bit
 	# friendly and can use the nicely optimized code paths. #460790
 	local ec_nistp_64_gcc_128
-	# Disable it for now though #469976
-	if ! use bindist ; then
-		echo "__uint128_t i;" > "${T}"/128.c
-		if ${CC} ${CFLAGS} -c "${T}"/128.c -o /dev/null >&/dev/null ; then
-			ec_nistp_64_gcc_128="enable-ec_nistp_64_gcc_128"
+	if use nist ; then
+		if ! use bindist ; then
+		   echo "__uint128_t i;" > "${T}"/128.c
+		   if ${CC} ${CFLAGS} -c "${T}"/128.c -o /dev/null >&/dev/null ; then
+		      ec_nistp_64_gcc_128="enable-ec_nistp_64_gcc_128"
+		   fi
 		fi
 	fi
 
