@@ -3,7 +3,7 @@ hnaparst
 
 Harold Naparst's Gentoo overlay
 
-dev-libs/openssl  with enable-ec_nistp_64_gcc_128
+dev-libs/openssl  Add nist use flag to enable NIST/SECG Elliptic Curve P-224.
 
 media-sound/subsonic See subsonic.org for information.
 
