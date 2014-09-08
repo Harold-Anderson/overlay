@@ -7,7 +7,7 @@ EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib multilib-minimal
 
 REV="1.7"
-DESCRIPTION="full-strength general purpose cryptography library (including SSL and TLS)"
+DESCRIPTION="OpenSSL with enable-ec_nistp_64_gcc_128 turned on."
 HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${P}.tar.gz
 	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/${PN}/${PN}-c_rehash.sh?rev=${REV} -> ${PN}-c_rehash.sh.${REV}"
