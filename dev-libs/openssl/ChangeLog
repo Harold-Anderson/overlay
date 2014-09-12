@@ -1,3 +1,6 @@
+  12 Sep 2014; Harold Naparst <harold@alum.mit.edu> metadata.xml:
+  Fixed herd
+
 2014-09-08 openssl-1.0.2_beta2.ebuild
 2014-09-08 Added nist use flag
 2014-09-08 Initial version
