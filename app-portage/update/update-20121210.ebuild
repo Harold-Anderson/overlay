@@ -1,4 +1,4 @@
-# Copyright 1999-20012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ HOMEPAGE="http://weaver.gentooexperimental.org/update.html"
 SRC_URI="http://weaver.gentooexperimental.org/src/update/update-${PV}.tar.bz2"
 RESTRICT="mirror"
 
-LICENSE="CCPL-Attribution-ShareAlike-NonCommercial-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
