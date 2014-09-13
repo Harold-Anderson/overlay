@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.60 2014/08/30 11:28:09 nimiux Exp $
 
+  13 Sep 2014; Harold Naparst <harold@alum.mit.edu> ChangeLog:
+  Add Shorewall-4.6.3.2 
+
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> shorewall-core-4.5.21.9.ebuild:
   Stable for amd64 wrt bug #511620
 
