@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>sera@gentoo.org</email>
+    <name>Ralph Sennhauser</name>
+  </maintainer>
+  <use>
+    <flag name="drm"></flag>
+    <flag name="egl"></flag>
+    <flag name="fribidi"></flag>
+    <flag name="gles"></flag>
+    <flag name="glib"></flag>
+    <flag name="harfbuzz"></flag>
+    <flag name="ibus"></flag>
+    <flag name="jp2k"></flag>
+    <flag name="physics"></flag>
+    <flag name="scim"></flag>
+    <flag name="tslib"></flag>
+    <flag name="v4l2"></flag>
+    <flag name="webp"></flag>
+    <flag name="xim"></flag>
+  </use>
+</pkgmetadata>

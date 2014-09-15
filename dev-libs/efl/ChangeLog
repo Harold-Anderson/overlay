@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/efl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*efl-1.11.2 (15 Sep 2014)
+
+  15 Sep 2014; Harold Naparst <harold@alum.mit.edu> +efl-1.11.2.ebuild,
+  +metadata.xml:
+  Add efl-1.11.2.ebuild
+

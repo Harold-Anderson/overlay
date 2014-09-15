@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>sera@gentoo.org</email>
+    <name>Ralph Sennhauser</name>
+  </maintainer>
+  <longdescription lang="en">
+  </longdescription>
+  <use>
+    <flag name="eeze"></flag>
+    <flag name="egl"></flag>
+    <flag name="enlightenment_modules_access"></flag>
+    <flag name="enlightenment_modules_appmenu"></flag>
+    <flag name="enlightenment_modules_backlight"></flag>
+    <flag name="enlightenment_modules_battery"></flag>
+    <flag name="enlightenment_modules_bluez4"></flag>
+    <flag name="enlightenment_modules_clock"></flag>
+    <flag name="enlightenment_modules_conf-applications"></flag>
+    <flag name="enlightenment_modules_conf-bindings"></flag>
+    <flag name="enlightenment_modules_conf-comp"></flag>
+    <flag name="enlightenment_modules_conf-dialogs"></flag>
+    <flag name="enlightenment_modules_conf-display"></flag>
+    <flag name="enlightenment_modules_conf-interaction"></flag>
+    <flag name="enlightenment_modules_conf-intl"></flag>
+    <flag name="enlightenment_modules_conf-menus"></flag>
+    <flag name="enlightenment_modules_conf-paths"></flag>
+    <flag name="enlightenment_modules_conf-performance"></flag>
+    <flag name="enlightenment_modules_conf-randr"></flag>
+    <flag name="enlightenment_modules_conf-shelves"></flag>
+    <flag name="enlightenment_modules_conf-theme"></flag>
+    <flag name="enlightenment_modules_conf-wallpaper2"></flag>
+    <flag name="enlightenment_modules_conf-window-manipulation"></flag>
+    <flag name="enlightenment_modules_conf-window-remembers"></flag>
+    <flag name="enlightenment_modules_connman"></flag>
+    <flag name="enlightenment_modules_contact"></flag>
+    <flag name="enlightenment_modules_cpufreq"></flag>
+    <flag name="enlightenment_modules_everything"></flag>
+    <flag name="enlightenment_modules_fileman"></flag>
+    <flag name="enlightenment_modules_fileman-opinfo"></flag>
+    <flag name="enlightenment_modules_gadman"></flag>
+    <flag name="enlightenment_modules_ibar"></flag>
+    <flag name="enlightenment_modules_ibox"></flag>
+    <flag name="enlightenment_modules_illume2"></flag>
+    <flag name="enlightenment_modules_lokker"></flag>
+    <flag name="enlightenment_modules_mixer"></flag>
+    <flag name="enlightenment_modules_msgbus"></flag>
+    <flag name="enlightenment_modules_music-control"></flag>
+    <flag name="enlightenment_modules_notification"></flag>
+    <flag name="enlightenment_modules_packagkit"></flag>
+    <flag name="enlightenment_modules_pager"></flag>
+    <flag name="enlightenment_modules_pager16"></flag>
+    <flag name="enlightenment_modules_quickaccess"></flag>
+    <flag name="enlightenment_modules_shot"></flag>
+    <flag name="enlightenment_modules_start"></flag>
+    <flag name="enlightenment_modules_syscon"></flag>
+    <flag name="enlightenment_modules_systray"></flag>
+    <flag name="enlightenment_modules_tasks"></flag>
+    <flag name="enlightenment_modules_teamwork"></flag>
+    <flag name="enlightenment_modules_temperature"></flag>
+    <flag name="enlightenment_modules_tiling"></flag>
+    <flag name="enlightenment_modules_winlist"></flag>
+    <flag name="enlightenment_modules_wizard"></flag>
+    <flag name="enlightenment_modules_wl-desktop-shell"></flag>
+    <flag name="enlightenment_modules_wl-drm"></flag>
+    <flag name="enlightenment_modules_wl-fb"></flag>
+    <flag name="enlightenment_modules_wl-screenshot"></flag>
+    <flag name="enlightenment_modules_wl-x11"></flag>
+    <flag name="enlightenment_modules_xkbswitch"></flag>
+    <flag name="pm-utils"></flag>
+    <flag name="ukit"></flag>
+  </use>
+</pkgmetadata>
