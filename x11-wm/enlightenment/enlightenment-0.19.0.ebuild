@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Enlightenment DR19 window manager"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="http://download.enlightenment.org/rel/apps/${PN}/${P/_/-}.tar.gz"
+SRC_URI="http://download.enlightenment.org/rel/apps/${PN}/${PF}.tar.gz"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"

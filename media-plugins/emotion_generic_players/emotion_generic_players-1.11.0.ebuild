@@ -1,23 +1,38 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
 EAPI=5
 DESCRIPTION="Players for Emotion using generic module."
 HOMEPAGE="http://www.enlightenment.org"
-EGIT_REPO_URI="http://git.enlightenment.org/core/${PN}.git"
-inherit git-2 autotools eutils
-EGIT_BRANCH="master"
+SRC_URI="http://download.enlightenment.org/rel/libs/${PN}/${PN}-${PV}.tar.gz"
+inherit autotools eutils
 KEYWORDS="~x86 ~amd64"
 LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 RDEPEND="media-video/vlc"
 DEPEND="${RDEPEND}"
+#S="${WORKDIR}/${P/_/-}"
+
+pkg_setup()
+{
+	return
+}
+src_unpack() {
+    if [ "${A}" != "" ]; then
+        unpack ${A}
+    fi
+}
+
 src_prepare() {
 if [[ ! -e configure ]] ; then
 eautoreconf
 fi
 }
+
 src_install() {
 default
 }
+
+

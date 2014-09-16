@@ -19,7 +19,7 @@
     <flag name="enlightenment_modules_clock"></flag>
     <flag name="enlightenment_modules_conf-applications"></flag>
     <flag name="enlightenment_modules_conf-bindings"></flag>
-    <flag name="enlightenment_modules_conf-comp"></flag>
+<!--    <flag name="enlightenment_modules_conf-comp"></flag> -->
     <flag name="enlightenment_modules_conf-dialogs"></flag>
     <flag name="enlightenment_modules_conf-display"></flag>
     <flag name="enlightenment_modules_conf-interaction"></flag>
@@ -30,7 +30,7 @@
     <flag name="enlightenment_modules_conf-randr"></flag>
     <flag name="enlightenment_modules_conf-shelves"></flag>
     <flag name="enlightenment_modules_conf-theme"></flag>
-    <flag name="enlightenment_modules_conf-wallpaper2"></flag>
+    <!-- <flag name="enlightenment_modules_conf-wallpaper2"></flag> -->
     <flag name="enlightenment_modules_conf-window-manipulation"></flag>
     <flag name="enlightenment_modules_conf-window-remembers"></flag>
     <flag name="enlightenment_modules_connman"></flag>
@@ -42,7 +42,7 @@
     <flag name="enlightenment_modules_gadman"></flag>
     <flag name="enlightenment_modules_ibar"></flag>
     <flag name="enlightenment_modules_ibox"></flag>
-    <flag name="enlightenment_modules_illume2"></flag>
+    <!-- <flag name="enlightenment_modules_illume2"></flag> -->
     <flag name="enlightenment_modules_lokker"></flag>
     <flag name="enlightenment_modules_mixer"></flag>
     <flag name="enlightenment_modules_msgbus"></flag>
@@ -65,7 +65,7 @@
     <flag name="enlightenment_modules_wl-desktop-shell"></flag>
     <flag name="enlightenment_modules_wl-drm"></flag>
     <flag name="enlightenment_modules_wl-fb"></flag>
-    <flag name="enlightenment_modules_wl-screenshot"></flag>
+    <!-- <flag name="enlightenment_modules_wl-screenshot"></flag> -->
     <flag name="enlightenment_modules_wl-x11"></flag>
     <flag name="enlightenment_modules_xkbswitch"></flag>
     <flag name="pm-utils"></flag>
