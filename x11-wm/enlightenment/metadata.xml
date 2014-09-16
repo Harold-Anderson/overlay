@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>sera@gentoo.org</email>
-    <name>Ralph Sennhauser</name>
+    <email>harold@alum.mit.edu</email>
+    <name>Harold Naparst</name>
   </maintainer>
   <longdescription lang="en">
+    Enlightenment Window Manager.
   </longdescription>
   <use>
     <flag name="eeze"></flag>
