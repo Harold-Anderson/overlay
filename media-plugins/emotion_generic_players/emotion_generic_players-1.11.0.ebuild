@@ -19,11 +19,6 @@ pkg_setup()
 {
 	return
 }
-src_unpack() {
-    if [ "${A}" != "" ]; then
-        unpack ${A}
-    fi
-}
 
 src_prepare() {
 if [[ ! -e configure ]] ; then
@@ -34,5 +29,3 @@ fi
 src_install() {
 default
 }
-
-

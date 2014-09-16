@@ -37,12 +37,6 @@ PDEPEND="app-misc/ca-certificates"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	SSL_CNF_DIR="/etc/ssl"
-	sed \
-		-e "/^DIR=/s:=.*:=${EPREFIX}${SSL_CNF_DIR}:" \
-		-e "s:SSL_CMD=/usr:SSL_CMD=${EPREFIX}/usr:" \
-		"${DISTDIR}"/${PN}-c_rehash.sh.${REV} \
-		> "${WORKDIR}"/c_rehash || die #416717
 }
 
 MULTILIB_WRAPPED_HEADERS=(
@@ -52,6 +46,13 @@ MULTILIB_WRAPPED_HEADERS=(
 src_prepare() {
 	# Make sure we only ever touch Makefile.org and avoid patching a file
 	# that gets blown away anyways by the Configure script in src_configure
+	SSL_CNF_DIR="/etc/ssl"
+	sed \
+		-e "/^DIR=/s:=.*:=${EPREFIX}${SSL_CNF_DIR}:" \
+		-e "s:SSL_CMD=/usr:SSL_CMD=${EPREFIX}/usr:" \
+		"${DISTDIR}"/${PN}-c_rehash.sh.${REV} \
+		> "${WORKDIR}"/c_rehash || die #416717
+
 	rm -f Makefile
 
 	if ! use vanilla ; then
