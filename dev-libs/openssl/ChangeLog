@@ -4,3 +4,10 @@
 2014-09-08 openssl-1.0.2_beta2.ebuild
 2014-09-08 Added nist use flag
 2014-09-08 Initial version
+
+*openssl-1.0.2_beta3 (26 Sep 2014)
+
+  26 Sep 2014; Harold Naparst <harold@alum.mit.edu>
+  +openssl-1.0.2_beta3.ebuild:
+  openssl-1.0.2_beta3.ebuild
+
