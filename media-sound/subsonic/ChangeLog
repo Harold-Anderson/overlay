@@ -1,4 +1,10 @@
 
+
+*subsonic-5.0 (06 Oct 2014)
+
+  06 Oct 2014; Harold Naparst <harold@alum.mit.edu> +subsonic-5.0.ebuild:
+  added subsonic-5.0.ebuild
+
   12 Sep 2014; Harold Naparst <harold@alum.mit.edu> subsonic-5.0_beta2.ebuild:
   ~x86
 
