@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*joomla-3.3.6 (07 Oct 2014)
+
+  07 Oct 2014; Harold Naparst <harold@alum.mit.edu> +joomla-3.3.6.ebuild:
+  joomla-3.3.6
+
   05 September 2014; Harold Naparst <harold@alum.mit.edu> joomla-3.3.3.ebuild:
   Clean up use flags.
 
