@@ -8,23 +8,22 @@ inherit webapp depend.php
 MAGIC_1="19822"
 MAGIC_2="161256"
 
-DESCRIPTION="Content Management System."
+DESCRIPTION="Joomla is a powerful Open Source Content Management System."
 HOMEPAGE="http://www.joomla.org/"
 SRC_URI="http://joomlacode.org/gf/download/frsrelease/${MAGIC_1}/${MAGIC_2}/Joomla_${PV}-Stable-Full_Package.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}"
 
-IUSE="mysql postgres"
-
 DEPEND="${DEPEND}
 	app-arch/unzip"
-RDEPEND=">=dev-lang/php-5.3.10[json,mysql?,postgres?,zlib,xml]"
+RDEPEND=">=dev-lang/php-5.3.10[json,zlib,xml]
+	 || ( dev-lang/php[mysql] dev-lang/php[postgres] )"
 
 src_install () {
 	webapp_src_preinst
