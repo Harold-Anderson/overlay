@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.4.ebuild,v 1.1 2014/09/22 07:05:12 polynomial-c Exp $
 
-EAPI="4"
+EAPI="5"
 
 # Usually apr-util has the same PV as apr, but in case of security fixes, this may change.
 # APR_PV="${PV}"
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.4.2
 	doc? ( app-doc/doxygen )"
 
+REQUIRED_USE="?? ( mysql postgres )"
 DOCS=(CHANGES NOTICE README)
 
 src_prepare() {
@@ -67,15 +68,6 @@ src_configure() {
 
 	if use nss || use openssl ; then
 		myconf+=( --with-crypto ) # 518708
-	fi
-
-	if (use mysql && use postgres); then
-	   	echo ""
-	        echo "NOTE FROM YOUR FRIENDLY GENTOO DEVELOPER"
-		echo "There is a bug in the upstream version of apr-util."
-		echo "Please choose one of mysql or postgres."
-		echo ""
-		die
 	fi
 
 	econf \

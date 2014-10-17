@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.211 2014/09/22 07:05:12 polynomial-c Exp $
 
+  17 Oct 2014; Harold Naparst <harold@alum.mit.edu> apr-util-1.5.4.ebuild:
+  add REQUIRED_USE to apr-util-1.5.4 ebuild
+
   17 Oct 2014; Harold Naparst <harold@alum.mit.edu> +apr-util-1.5.2.ebuild,
   +apr-util-1.5.3-r2.ebuild, +apr-util-1.5.4.ebuild,
   +files/apr-util-1.3.12-bdb-5.2.patch, +files/apr-util-1.5.3-berkdb6.patch,
