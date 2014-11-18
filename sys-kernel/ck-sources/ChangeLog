@@ -1,0 +1,17 @@
+# ChangeLog for sys-kernel/ck-sources
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ck-sources-3.17.2 (18 Nov 2014)
+*ck-sources-3.14.4 (18 Nov 2014)
+
+  18 Nov 2014; Harold Naparst <harold@alum.mit.edu> +ck-sources-3.14.4.ebuild,
+  +ck-sources-3.17.2.ebuild,
+  +files/ck-sources-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch
+  , +files/ck-sources-3.4.9-calc_load_idle-aCOSwt_P3.patch,
+  +files/ck-sources-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch,
+  +files/ck-sources-3.4.81-update_cpu_load-aCOSwt_P9.patch,
+  +files/ck-sources-3.6-Fix_Boot_Issue_On_Kvm-aCOSwt_P6.patch,
+  +files/ck-sources-3.9-virt_cpu_accounting_gen-aCOSwt_P7.patch, +metadata.xml:
+  add ck-sources-3.17.2
+
