@@ -2,6 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Nov 2014; Harold Naparst <harold@alum.mit.edu> ChangeLog:
+  Added ck-sources-3.10.41.ebuild ck-sources-3.12.32.ebuild
+  ck-sources-3.14.24.ebuild ck-sources-3.17.3.ebuild ck-sources-3.4.104.ebuild
+  Added harold@alum.mit.edu as maintainer in metadata.xml
+  commented out kvm use flag in metadata.xml
+
 *ck-sources-3.17.2 (18 Nov 2014)
 *ck-sources-3.14.4 (18 Nov 2014)
 
