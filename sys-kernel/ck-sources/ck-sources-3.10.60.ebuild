@@ -35,13 +35,15 @@ XTRA_INCP_MAX=""
 CK_VERSION="1"
 BFS_VERSION="440"
 
-CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
-BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
+CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}-r1.bz2"
+BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}-r1.patch"
 
 CK_BASE_URL="http://ck.kolivas.org/patches/3.0"
 CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}/${K_BRANCH_ID}-ck${CK_VERSION}"
-CK_URI="${CK_LVER_URL}/${CK_FILE}"
-BFS_URI="${CK_LVER_URL}/patches/${BFS_FILE}"
+CK_URI="http://dev.gentoo.org/~dlan/distfiles/${CK_FILE}
+	${CK_LVER_URL}/${CK_FILE}"
+BFS_URI="http://dev.gentoo.org/~dlan/distfiles/${BFS_FILE}
+	${CK_LVER_URL}/patches/${BFS_FILE}"
 
 #-- Build extra incremental patches list --------------------------------------
 
