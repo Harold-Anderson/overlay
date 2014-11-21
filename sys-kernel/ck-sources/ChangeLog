@@ -2,6 +2,13 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Nov 2014; Harold Naparst <harold@alum.mit.edu> metadata.xml:
+  Removed kvm useflag
+
+  21 Nov 2014; Harold Naparst <harold@alum.mit.edu> ChangeLog:
+  Removed unneeded pre- and post-CK patches.
+  removed ck-sources-3.10.41
+
   21 Nov 2014; Harold Naparst <harold@alum.mit.edu> ck-sources-3.10.60.ebuild:
   Added ck-sources-3.10.60.ebuild with dlan's patch to the ck patch series.
 
