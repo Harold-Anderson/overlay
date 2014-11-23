@@ -8,13 +8,13 @@ inherit versionator
 
 MY_PV=$(replace_version_separator 2 '.' )
 
-DESCRIPTION="A free, open source, web-based media server in Java."
+DESCRIPTION="A free, open source, web-based media server in Java"
 HOMEPAGE="http://www.subsonic.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PV}/${PN}-${MY_PV}-standalone.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
