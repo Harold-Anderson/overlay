@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2014; Harold Naparst <harold@alum.mit.edu> ChangeLog:
+  Add patch for GtkStyle and pyside-1.2.2.ebuild
+
 *pyside-9999 (29 Nov 2014)
 
   29 Nov 2014; Harold Naparst <harold@alum.mit.edu> +pyside-9999.ebuild,
