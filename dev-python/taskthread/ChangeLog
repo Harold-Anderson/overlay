@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/taskthread
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*taskthread-1.4 (01 Dec 2014)
+
+  01 Dec 2014; Harold Naparst <harold@alum.mit.edu> +taskthread-1.4.ebuild,
+  +metadata.xml:
+  Add taskthread-1.4, metadata.xml Manifest
+
