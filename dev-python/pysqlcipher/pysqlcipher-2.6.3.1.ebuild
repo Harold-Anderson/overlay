@@ -13,7 +13,7 @@ DESCRIPTION="A fork of pysqlite.   An interface to SQLite 3.x with SQLCipher"
 HOMEPAGE="https://leap.se https://github.com/leapcode/pysqlcipher/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
