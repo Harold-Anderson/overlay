@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leap_mail
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*leap_mail-0.3.10 (02 Dec 2014)
+
+  02 Dec 2014; Harold Naparst <harold@alum.mit.edu> +leap_mail-0.3.10.ebuild,
+  +metadata.xml:
+  Add leap_mail-0.3.10.ebuild and metadata.xml
+
