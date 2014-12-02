@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/dirspec
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*dirspec-13.10 (02 Dec 2014)
+
+  02 Dec 2014; Harold Naparst <harold@alum.mit.edu> +dirspec-13.10.ebuild,
+  +metadata.xml:
+  Add dirspec-13.10.ebuild and metadata.xml
+
