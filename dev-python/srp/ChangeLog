@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/srp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*srp-1.0.5 (02 Dec 2014)
+
+  02 Dec 2014; Harold Naparst <harold@alum.mit.edu> +srp-1.0.5.ebuild,
+  +metadata.xml:
+  Add srp-1.0.5.ebuild and metadata.xml
+
