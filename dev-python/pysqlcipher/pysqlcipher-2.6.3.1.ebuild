@@ -20,14 +20,11 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-db/sqlcipher"
+	dev-db/sqlcipher"  # from eigenlay overlay
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 python_prepare_all() {
-	# Don't install license files
-#	sed -i -e "/data_files=data_files,/d" setup.py || die
-
 	distutils-r1_python_prepare_all
 }
 
