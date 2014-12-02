@@ -17,15 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-python/simplejson
-	dev-python/u1db
-	dev-python/scrypt
-	dev-python/pycryptopp
-	dev-python/chardet
-	dev-python/oauth
-	dev-python/taskthread
-	dev-python/pysqlcipher
-	dev-python/couchdb-python
-	dev-python/configparser
-	dev-python/twisted-web"
+	net-misc/leap_pycommon
+	dev-python/requests
+	>=app-crypt/gnupg-1.2.3
+	dev-python/enum34"
 
 DEPEND="${RDEPEND}"
