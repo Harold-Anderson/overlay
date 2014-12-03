@@ -16,7 +16,8 @@ LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="net-misc/soledad-common"
+RDEPEND="net-misc/soledad-common
+	$(python_abi_depend net-zope/zope.proxy)"
 
 DEPEND="${RDEPEND}"
 
