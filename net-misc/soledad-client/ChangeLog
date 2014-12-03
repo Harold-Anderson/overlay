@@ -4,6 +4,10 @@
 
   03 Dec 2014; Harold Naparst <harold@alum.mit.edu>
   soledad-client-0.6.0.ebuild:
+  Spelling error in description
+
+  03 Dec 2014; Harold Naparst <harold@alum.mit.edu>
+  soledad-client-0.6.0.ebuild:
   Attempt to get zope.proxy as a dependency
 
 *soledad-client-0.6.0 (02 Dec 2014)

@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit eutils git-r3 distutils-r1
 
-DESCRIPTION="Synchronizatin of locally encrypted data among devices"
+DESCRIPTION="Synchronization of locally encrypted data among devices"
 HOMEPAGE="https://leap.se/en/docs/soledad"
 EGIT_REPO_URI="https://github.com/leapcode/soledad.git"
 EGIT_COMMIT="${PV}"
