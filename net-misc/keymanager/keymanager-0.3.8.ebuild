@@ -9,7 +9,7 @@ inherit eutils git-r3 distutils-r1
 
 DESCRIPTION="A Nicknym agent for the LEAP project"
 HOMEPAGE="https://leap.se/pt/docs/design/nicknym"
-EGIT_REPO_URI="https://github.com/leapcode/keymanager.git"
+EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
 
 LICENSE="CC-BY-SA-3.0"
