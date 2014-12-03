@@ -6,6 +6,7 @@ EAPI=5
 inherit webapp depend.php versionator git-r3
 
 MY_PV=$(replace_version_separator '_' '-')
+CAT="www-apps"
 
 DESCRIPTION="Joomla is a powerful Open Source Content Management System."
 HOMEPAGE="http://www.joomla.org/"
@@ -24,8 +25,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 need_httpd_cgi
 need_php_httpd
-
-S="${WORKDIR}"
 
 DEPEND="${DEPEND}
 	app-arch/unzip"
