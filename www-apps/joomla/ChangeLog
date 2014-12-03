@@ -3,6 +3,9 @@
 # $Header: $
 
   03 Dec 2014; Harold Naparst <harold@alum.mit.edu> joomla-3.4.0_alpha.ebuild:
+  Fix dependencies for 3.4.0_alpha
+
+  03 Dec 2014; Harold Naparst <harold@alum.mit.edu> joomla-3.4.0_alpha.ebuild:
   Add joomla-3.4.0_alpha.ebuild
 
   03 Dec 2014; Harold Naparst <harold@alum.mit.edu> joomla-3.4.0_alpha.ebuild:

@@ -12,13 +12,6 @@ HOMEPAGE="http://www.joomla.org/"
 EGIT_REPO_URI="https://github.com/${PN}/${PN}-cms.git"
 EGIT_COMMIT="${MY_PV}"
 
-RDEPEND="dev-python/simplejson
-	net-misc/leap_pycommon
-	dev-python/requests
-	>=app-crypt/gnupg-1.2.3
-	dev-python/enum34"
-
-DEPEND="${RDEPEND}"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
