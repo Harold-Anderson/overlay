@@ -26,7 +26,8 @@ RDEPEND="dev-python/simplejson
 	dev-python/pysqlcipher
 	dev-python/couchdb-python
 	dev-python/configparser
-	dev-python/twisted-web"
+	dev-python/twisted-web
+	net-firewall/iptables[ipv6]"
 
 DEPEND="${RDEPEND}"
 
