@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="net-zope/zope-interface
-	>=net-misc/soledad-client-0.4.5
-	>=net-misc/leap_pycommon-0.3.7
-	>=net-misc/keymanager-0.3.8
-	dev-python/enum34
-	dev-python/twisted-web"
+	>=net-misc/soledad-client-0.4.5[${PYTHON_USEDEP}]
+	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
+	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
+	dev-python/enum34[${PYTHON_USEDEP}]
+	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"

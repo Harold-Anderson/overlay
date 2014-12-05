@@ -18,9 +18,9 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/protobuf-2.4.1
 	dev-libs/openssl
-	dev-python/python-dateutil
-	dev-python/pyopenssl
-	dev-python/jsonschema
-	dev-python/dirspec"
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/jsonschema[${PYTHON_USEDEP}]
+	dev-python/dirspec[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"

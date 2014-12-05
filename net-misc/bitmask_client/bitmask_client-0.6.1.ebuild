@@ -16,21 +16,20 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/requests
-	virtual/python-argparse
-	dev-python/srp
-	dev-python/pyopenssl
-	dev-python/python-dateutil
-	dev-python/psutil
-	dev-python/ipaddr
-	dev-python/python-daemon
-	dev-python/keyring
-	dev-python/oauth
-	dev-python/pyzmq
-	>=net-misc/leap_mail-0.3.9
-	>=net-misc/soledad-client-0.5.0
-	>=net-misc/leap_pycommon-0.3.7
-	>=net-misc/keymanager-0.3.8
-	dev-python/twisted-web"
+RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/srp[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/psutil[${PYTHON_USEDEP}]
+	dev-python/ipaddr[${PYTHON_USEDEP}]
+	dev-python/python-daemon[${PYTHON_USEDEP}]
+	dev-python/keyring[${PYTHON_USEDEP}]
+	dev-python/oauth[${PYTHON_USEDEP}]
+	dev-python/pyzmq[${PYTHON_USEDEP}]
+	>=net-misc/leap_mail-0.3.9[${PYTHON_USEDEP}]
+	>=net-misc/soledad-client-0.5.0[${PYTHON_USEDEP}]
+	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
+	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
+	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"

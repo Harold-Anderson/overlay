@@ -16,8 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="net-misc/soledad-common
-	$(python_abi_depend net-zope/zope.proxy)"
+RDEPEND="net-misc/soledad-common[${PYTHON_USEDEP}]"
+# need to add net-zope/zope-proxy
 
 DEPEND="${RDEPEND}"
 

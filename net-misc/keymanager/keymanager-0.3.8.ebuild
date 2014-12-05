@@ -16,10 +16,10 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/simplejson
-	net-misc/leap_pycommon
-	dev-python/requests
+RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
+	net-misc/leap_pycommon[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	>=app-crypt/gnupg-1.2.3
-	dev-python/enum34"
+	dev-python/enum34[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"

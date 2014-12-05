@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Dec 2014; Harold Naparst <harold@alum.mit.edu> leap_mail-0.3.10.ebuild:
+  add [${PYTHON_USEDEP}]
+
   04 Dec 2014; Harold Naparst <harold@alum.mit.edu> leap_mail-0.3.10.ebuild:
   Changed description.
 

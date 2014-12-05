@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND="dev-python/cython
+DEPEND="dev-python/cython[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"
 
 src_install() {
