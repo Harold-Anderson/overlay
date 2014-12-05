@@ -12,7 +12,7 @@ HOMEPAGE="https://leap.se/pt/docs/design/nicknym"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
 
-LICENSE="CC-BY-SA-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
