@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit eutils git-r3 distutils-r1
 
-DESCRIPTION="Common utilities for leap python modules."
+DESCRIPTION="Common utilities for leap python modules"
 HOMEPAGE="https://leap.se"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
