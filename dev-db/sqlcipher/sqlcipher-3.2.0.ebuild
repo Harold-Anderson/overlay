@@ -14,7 +14,6 @@ EGIT_COMMIT="v${PV}"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 LICENSE="ZETETIC"
 
 RDEPEND="dev-libs/openssl"
