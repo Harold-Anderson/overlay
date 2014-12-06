@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit eutils git-r3 distutils-r1
 
-DESCRIPTION="Desktop client for the LEAP Platform."
+DESCRIPTION="Desktop client for the LEAP Platform"
 HOMEPAGE="https://leap.se/en/docs/client"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
