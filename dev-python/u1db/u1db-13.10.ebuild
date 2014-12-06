@@ -9,7 +9,7 @@ inherit distutils-r1 versionator eutils
 
 MY_PV=$(replace_version_separator 1 '-')
 
-DESCRIPTION="U1DB is a database API for synchronised databases of JSON documents"
+DESCRIPTION="Database API for synchronised databases of JSON documents"
 HOMEPAGE="https://launchpad.net/u1db"
 SRC_URI="https://launchpad.net/${PN}/stable-${MY_PV}/${PV}/+download/u1db-${PV}.tar.bz2"
 
@@ -17,7 +17,6 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror"
 
 DEPEND="dev-python/cython[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"
