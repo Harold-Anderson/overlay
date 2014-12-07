@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/enum
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*enum-0.4.4 (07 Dec 2014)
+
+  07 Dec 2014; Harold Naparst <harold@alum.mit.edu> +enum-0.4.4.ebuild,
+  +metadata.xml:
+  Add enum-0.4.4.ebuild
+
