@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pysqlite
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*pysqlite-2.6.3 (07 Dec 2014)
+
+  07 Dec 2014; Harold Naparst <harold@alum.mit.edu> +pysqlite-2.6.3.ebuild,
+  +metadata.xml:
+  Add pysqlite-2.6.3.ebuild
+
