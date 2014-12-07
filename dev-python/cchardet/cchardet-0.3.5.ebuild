@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 
-DESCRIPTION="Robust enumerated type support in Python."
+DESCRIPTION="3000 times faster than chardet"
 HOMEPAGE="https://github.com/PyYoshi/cChardet"
 SRC_URI="mirror://pypi/c/cchardet/cchardet-0.3.5.tar.gz"
 IUSE=""
