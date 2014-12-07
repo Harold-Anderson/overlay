@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/cchardet
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*cchardet-0.3.5 (07 Dec 2014)
+
+  07 Dec 2014; Harold Naparst <harold@alum.mit.edu> +cchardet-0.3.5.ebuild,
+  +metadata.xml:
+  Add cchardet-0.3.5.ebuild
+
