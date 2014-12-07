@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="ZETETIC"
 
 RDEPEND="dev-libs/openssl"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-lang/tcl"
 
 src_configure()
 {
