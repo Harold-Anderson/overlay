@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-db/sqlcipher" 
+	dev-db/sqlcipher
+	dev-python/pysqlite"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
