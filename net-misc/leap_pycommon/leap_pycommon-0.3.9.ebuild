@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/protobuf-2.4.1[python,${PYTHON_USEDEP}]
 	dev-python/protobuf-socketrpc[${PYTHON_USEDEP}]
+	dev-python/routes[${PYTHON_USEDEP}]
 	dev-libs/openssl
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/pyopenssl[${PYTHON_USEDEP}]
