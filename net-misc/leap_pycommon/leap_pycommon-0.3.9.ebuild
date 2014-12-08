@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/protobuf-2.4.1[python,${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/pyopenssl[${PYTHON_USEDEP}]
 	dev-python/jsonschema[${PYTHON_USEDEP}]
+	dev-python/paste[${PYTHON_USEDEP}]
 	dev-python/dirspec[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"
