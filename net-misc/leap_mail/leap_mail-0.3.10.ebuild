@@ -21,6 +21,8 @@ RDEPEND="net-zope/zope-interface
 	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
 	dev-python/enum34[${PYTHON_USEDEP}]
+	dev-python/twisted-mail[${PYTHON_USEDEP}]"
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
+
 
 DEPEND="${RDEPEND}"
