@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/srp[${PYTHON_USEDEP}]
 	dev-python/pyside[${PYTHON_USEDEP}]
-	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/ipaddr[${PYTHON_USEDEP}]
