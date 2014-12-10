@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ck-sources-3.17.6 (10 Dec 2014)
+
+  10 Dec 2014; Harold Naparst <harold@alum.mit.edu> +ck-sources-3.17.6.ebuild:
+  Add ck-sources-3.17.6.ebuild
+
   24 Nov 2014; Harold Naparst <harold@alum.mit.edu> metadata.xml:
   Change Harold Naparst to primary maintainer.
 
