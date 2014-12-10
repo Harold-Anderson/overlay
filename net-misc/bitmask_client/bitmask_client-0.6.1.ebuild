@@ -48,8 +48,12 @@ python_prepare_all() {
 python_compile_all() {
 	"${PYTHON}" setup.py build || die
 	make || die
+	cp pkg/linux/bitmask-root /usr/bin
+	cp pkg/linux/polkit/se.leap.bitmask.policy /usr/share/polkit-1/actions/
+	set +x
 }
 
 python_install() {
+		 cp 
 	distutils-r1_python_install
 }
