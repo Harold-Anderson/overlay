@@ -33,4 +33,23 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-python/setuptools
+	dev-libs/openssl
+	net-misc/openvpn
+	dev-python/pyside-tools
+	dev-python/pyside
+	dev-ruby/ffi"
+
+python_prepare_all() {
+	distutils-r1_python_prepare_all
+}
+
+python_compile_all() {
+	"${PYTHON}" setup.py build || die
+	make || die
+}
+
+python_install() {
+	distutils-r1_python_install
+}
