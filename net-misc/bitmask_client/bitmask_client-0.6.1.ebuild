@@ -3,18 +3,17 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils git-r3 distutils-r1
 
 DESCRIPTION="Desktop client for the LEAP Platform"
-HOMEPAGE="https://leap.se/en/docs/client"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
-
-LICENSE="GPL-3"
-SLOT="0"
+HOMEPAGE="https://leap.se/en/docs/client"
 KEYWORDS="~amd64 ~x86"
+LICENSE=GPL-3
+SLOT=0
 
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/srp[${PYTHON_USEDEP}]
@@ -34,11 +33,11 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-libs/openssl
 	net-misc/openvpn
-	dev-python/pyside-tools
-	dev-python/pyside
+	dev-python/pyside-tools[${PYTHON_USEDEP}]
+	dev-python/pyside[${PYTHON_USEDEP}]
 	dev-ruby/ffi"
 
 python_prepare_all() {
