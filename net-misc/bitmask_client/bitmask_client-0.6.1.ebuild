@@ -30,7 +30,8 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	>=net-misc/soledad-client-0.5.0[${PYTHON_USEDEP}]
 	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
-	dev-python/twisted-web[${PYTHON_USEDEP}]"
+	dev-python/twisted-web[${PYTHON_USEDEP}]
+	>=net-libs/zeromq-4.0"
 
 DEPEND="${RDEPEND}
 	sys-apps/dbus
