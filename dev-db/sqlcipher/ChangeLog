@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu> sqlcipher-3.2.0.ebuild,
+  metadata.xml:
+  Add proxy-maint herd. Put tags in lex order.
+
   07 Dec 2014; Harold Naparst <harold@alum.mit.edu> sqlcipher-3.2.0.ebuild:
   Add dependence on dev-lang/tcl
 
