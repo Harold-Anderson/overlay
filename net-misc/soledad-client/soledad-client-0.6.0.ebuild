@@ -3,22 +3,20 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils git-r3 distutils-r1
 
 DESCRIPTION="Synchronization of locally encrypted data among devices"
-HOMEPAGE="https://leap.se/en/docs/soledad"
 EGIT_REPO_URI="https://github.com/leapcode/soledad.git"
-EGIT_COMMIT="${PV}"
-
-LICENSE="GPL-3"
-SLOT="0"
+EGIT_COMMIT=${PV}
+HOMEPAGE="https://leap.se/en/docs/soledad"
 KEYWORDS="~amd64 ~x86"
+LICENSE=GPL-3
+S="${WORKDIR}/${P}/client"
+SLOT=0
 
 RDEPEND="net-misc/soledad-common[${PYTHON_USEDEP}]
 	net-zope/zope-proxy[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/${P}/client"
