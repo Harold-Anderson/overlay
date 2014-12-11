@@ -4,6 +4,11 @@
 
 EAPI=5
 
+###
+### Please do not review this ebuild.  It is not for inclusion in portage.
+### For more info, see https://bugs.gentoo.org/show_bug.cgi?id=530764
+###
+
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit cmake-utils multilib python-r1 virtualx
