@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu>
+  protobuf-socketrpc-1.3.2.ebuild, metadata.xml:
+  Add python and proxy-maint herds. Put tags in lex order.
+
 *protobuf-socketrpc-1.3.2 (08 Dec 2014)
 
   08 Dec 2014; Harold Naparst <harold@alum.mit.edu>
