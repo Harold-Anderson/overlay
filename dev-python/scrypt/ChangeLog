@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu> scrypt-0.6.1.ebuild,
+  metadata.xml:
+  Add proxy-maint and python herds. Put tags in lex order.
+
 *scrypt-0.6.1 (06 Dec 2014)
 
   06 Dec 2014; Harold Naparst <harold@alum.mit.edu> +scrypt-0.6.1.ebuild,
