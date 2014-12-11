@@ -33,10 +33,13 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}
+	sys-apps/dbus
+	sys-auth/polkit
+	sys-auth/consolekit
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-libs/openssl
 	net-misc/openvpn
-	dev-python/pyside-tools[${PYTHON_USEDEP}]
+	dev-python/pyside-tools
 	dev-python/pyside[${PYTHON_USEDEP}]
 	dev-ruby/ffi"
 
@@ -50,9 +53,8 @@ python_compile_all() {
 }
 
 python_install() {
-	set -x
-	cp pkg/linux/bitmask-root /usr/sbin
-	cp pkg/linux/polkit/se.leap.bitmask.policy /usr/share/polkit-1/actions/
-	set +x
+	doexe pkg/linux/bitmask-root
+	insinto /usr/share/polkit-1/actions
+	doins "${S}/pkg/linux/polkit/se.leap.bitmask.policy"
 	distutils-r1_python_install
 }
