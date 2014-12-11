@@ -19,7 +19,7 @@ RDEPEND="net-zope/zope-interface[${PYTHON_USEDEP}]
 	>=net-misc/soledad-client-0.4.5[${PYTHON_USEDEP}]
 	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
-	dev-python/enum34[${PYTHON_USEDEP}]
+	dev-python/enum[${PYTHON_USEDEP}]
 	dev-python/twisted-mail[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
