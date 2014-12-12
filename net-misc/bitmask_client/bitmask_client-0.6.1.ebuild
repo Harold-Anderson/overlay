@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils git-r3 distutils-r1
+inherit eutils git-r3 distutils-r1 linux-info
 
 DESCRIPTION="Desktop client for the LEAP Platform"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
@@ -43,6 +43,39 @@ DEPEND="${RDEPEND}
 	dev-python/pyside-tools
 	dev-python/pyside[${PYTHON_USEDEP}]
 	dev-ruby/ffi"
+
+pkg_setup() {
+	linux-info_pkg_setup
+
+	get_version
+
+	if linux_config_exists ; then
+		ewarn
+		ewarn "\033[1;33m**************************************************\033[00m"
+		ewarn
+		ewarn "Checking kernel configuration in /usr/src/linux or"
+		ewarn "or /proc/config.gz for compatibility with ${PN}."
+		ewarn "Here are the potential problems:"
+		ewarn
+
+		local nothing="1"
+
+		# Check for IP6_NF_FILTER
+		local msg=""
+		for i in IPV6 IP6_NF_FILTER ; do
+			if ! linux_chkconfig_present ${i}; then
+				msg="${msg} ${i}"
+			fi
+		done
+		if [[ ! -z "$msg" ]]; then
+			nothing="0"
+			ewarn
+			ewarn "ALL IPV6 filter table may fail. CHECK:"
+			ewarn "${msg}"
+		fi
+
+	fi
+}
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
