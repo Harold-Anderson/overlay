@@ -73,7 +73,21 @@ pkg_setup() {
 		if [[ ! -z "$msg" ]]; then
 			nothing="0"
 			ewarn
-			ewarn "ALL IPV6 filter table may fail. CHECK:"
+			ewarn "IPV6 filter table may fail. CHECK:"
+			ewarn "${msg}"
+		fi
+
+		# Check for TUN
+		local msg=""
+		for i in TUN ; do
+			if ! linux_chkconfig_present ${i}; then
+				msg="${msg} ${i}"
+			fi
+		done
+		if [[ ! -z "$msg" ]]; then
+			nothing="0"
+			ewarn
+			ewarn "Tunneling may fail. CHECK:"
 			ewarn "${msg}"
 		fi
 
