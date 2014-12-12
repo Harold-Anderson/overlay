@@ -25,13 +25,13 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/oauth[${PYTHON_USEDEP}]
-	dev-python/pyzmq[${PYTHON_USEDEP}]
+	dev-python/pyzmq[bundled,${PYTHON_USEDEP}]
 	>=net-misc/leap_mail-0.3.9[${PYTHON_USEDEP}]
 	>=net-misc/soledad-client-0.5.0[${PYTHON_USEDEP}]
 	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
-	dev-python/twisted-web[${PYTHON_USEDEP}]
-	>=net-libs/zeromq-4.0"
+	dev-python/twisted-web[${PYTHON_USEDEP}]"
+
 
 DEPEND="${RDEPEND}
 	sys-apps/dbus
