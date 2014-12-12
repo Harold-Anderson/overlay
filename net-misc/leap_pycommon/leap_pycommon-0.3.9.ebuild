@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/protobuf-2.4.1[python,${PYTHON_USEDEP}]
 	dev-python/protobuf-socketrpc[${PYTHON_USEDEP}]
 	dev-python/routes[${PYTHON_USEDEP}]
 	dev-libs/openssl
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	~dev-python/python-dateutil-1.4.1[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	dev-python/jsonschema[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
