@@ -6,12 +6,14 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils git-r3 distutils-r1 linux-info
+inherit eutils git-r3 distutils-r1 linux-info versionator
 
 DESCRIPTION="Desktop client for the LEAP Platform"
 HOMEPAGE="https://leap.se/en/docs/client"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
-EGIT_COMMIT="${PV}"
+
+MY_PV=$(delete_version_separator '_')
+EGIT_COMMIT="${MY_PV}"
 
 LICENSE=GPL-3
 SLOT=0
