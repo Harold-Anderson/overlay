@@ -3,18 +3,18 @@
 # $Header: $
 
 EAPI=5
-inherit webapp depend.php versionator git-r3
+inherit webapp depend.php versionator
 
 MY_PV=$(replace_version_separator '_' '-')
 
 DESCRIPTION="Joomla is a powerful Open Source Content Management System."
 HOMEPAGE="http://www.joomla.org/"
-EGIT_REPO_URI="https://github.com/${PN}/${PN}-cms.git"
-EGIT_COMMIT="${MY_PV}"
+SRC_URI="https://github.com/joomla/joomla-cms/releases/download/${MY_PV}/Joomla_${MY_PV}-Alpha-Full_Package.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
+S=${WORKDIR}
 need_httpd_cgi
 need_php_httpd
 
