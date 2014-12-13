@@ -4,26 +4,20 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 python-r1
 
 DESCRIPTION="DB-API 2.0 interface for SQLite 3.x"
-HOMEPAGE="https://github.com/ghaering/pysqlite https://pysqlite.readthedocs.org/ https://pypi.python.org/pypi/pysqlite"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-#SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz -> ${P}-pypi.tar.gz"
-
-LICENSE="ZLIB"
-KEYWORDS="~amd64 ~x86"
+HOMEPAGE="https://github.com/ghaering/pysqlite"
 IUSE="examples"
-SLOT="0"
+KEYWORDS="~amd64 ~x86"
+LICENSE=ZLIB
+SLOT=0
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 DEPEND=">=dev-db/sqlite-3.3.8:3"
 RDEPEND=${DEPEND}
-
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
-#PYTHON_MODULES="pysqlite2"
 
 src_prepare() {
 	distutils-r1_src_prepare
@@ -36,6 +30,14 @@ src_prepare() {
 
 	# Workaround to make tests work without installing them.
 	sed -e "s/pysqlite2.test/test/" -i lib/test/__init__.py || die "sed lib/test/__init__.py failed"
+}
+
+python_compile() {
+	if ! python_is_python3; then
+		local CFLAGS="${CFLAGS} -fno-strict-aliasing"
+		export CFLAGS
+	fi
+	distutils-r1_python_compile
 }
 
 src_test() {

@@ -2,19 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=5
 
 inherit flag-o-matic eutils git-r3
 
 DESCRIPTION="Like SQLite but encrypted"
-HOMEPAGE="http://sqlcipher.net/"
-inherit git-r3
 EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 EGIT_COMMIT="v${PV}"
-
-SLOT="0"
+HOMEPAGE="http://sqlcipher.net/"
 KEYWORDS="~amd64 ~x86"
-LICENSE="ZETETIC"
+LICENSE=ZETETIC
+SLOT=0
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}

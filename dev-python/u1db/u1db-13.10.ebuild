@@ -3,20 +3,18 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 versionator eutils
 
-MY_PV=$(replace_version_separator 1 '-')
-
 DESCRIPTION="Database API for synchronised databases of JSON documents"
 HOMEPAGE="https://launchpad.net/u1db"
-SRC_URI="https://launchpad.net/${PN}/stable-${MY_PV}/${PV}/+download/u1db-${PV}.tar.bz2"
-
-LICENSE="LGPL-3"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
+KEYWORDS="~amd64 ~x86"
+LICENSE=LGPL-3
+MY_PV=$(replace_version_separator 1 '-')
+SLOT=0
+SRC_URI="https://launchpad.net/${PN}/stable-${MY_PV}/${PV}/+download/u1db-${PV}.tar.bz2"
 
 DEPEND="dev-python/cython[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"

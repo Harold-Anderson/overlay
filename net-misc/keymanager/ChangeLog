@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu> keymanager-0.3.8.ebuild,
+  metadata.xml:
+  Add python and proxy-maint herds. Put tags in lex order.
+
   05 Dec 2014; Harold Naparst <harold@alum.mit.edu> keymanager-0.3.8.ebuild:
   add [${PYTHON_USEDEP}]
 

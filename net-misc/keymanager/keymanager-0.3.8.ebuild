@@ -3,24 +3,22 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils git-r3 distutils-r1
 
-DESCRIPTION="A Nicknym agent for the LEAP project"
-HOMEPAGE="https://leap.se/pt/docs/design/nicknym"
 EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
 EGIT_COMMIT="${PV}"
-
-LICENSE="GPL-3"
-SLOT="0"
+DESCRIPTION="A Nicknym agent for the LEAP project"
+HOMEPAGE="https://leap.se/pt/docs/design/nicknym"
 KEYWORDS="~amd64 ~x86"
+LICENSE=GPL-3
+SLOT=0
 
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
 	net-misc/leap_pycommon[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	>=dev-python/gnupg-1.2.3
-	python_targets_python2_7? ( dev-python/enum )
-	python_targets_python3_4? ( dev-python/enum34 )"
+	>=dev-python/gnupg-1.2.3[${PYTHON_USEDEP}]
+	python_targets_python2_7? ( dev-python/enum[${PYTHON_USEDEP}] )"
 
 DEPEND="${RDEPEND}"

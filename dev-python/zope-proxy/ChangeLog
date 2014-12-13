@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu> zope-proxy-4.1.4.ebuild,
+  metadata.xml:
+  Changes suggested by mgorny to bring the ebuild up to Gentoo standards.
+
 *zope-proxy-4.1.4 (06 Dec 2014)
 
   06 Dec 2014; Harold Naparst <harold@alum.mit.edu> +zope-proxy-4.1.4.ebuild,

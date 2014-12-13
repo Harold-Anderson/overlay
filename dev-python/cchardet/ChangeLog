@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Dec 2014; Harold Naparst <harold@alum.mit.edu> cchardet-0.3.5.ebuild,
+  metadata.xml:
+  Put tags in lexical order. Add python and proxy-maint herds
+
 *cchardet-0.3.5 (07 Dec 2014)
 
   07 Dec 2014; Harold Naparst <harold@alum.mit.edu> +cchardet-0.3.5.ebuild,
