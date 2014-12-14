@@ -20,7 +20,7 @@ MY_P="${MY_PN}-${PV}"
 SLOT="0"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
-RDEPEND="net-zope/zope-interface[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/zope-interface[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/repoze-sphinx-autointerface[${PYTHON_USEDEP}]
