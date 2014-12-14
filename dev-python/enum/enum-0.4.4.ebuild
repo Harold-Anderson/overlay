@@ -10,9 +10,12 @@ inherit distutils-r1
 
 DESCRIPTION="Robust enumerated type support in Python."
 HOMEPAGE="http://pypi.python.org/pypi/enum/"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
-LICENSE=GPL-2
-RESTRICT="mirror"
-SLOT=0
 SRC_URI="mirror://pypi/e/${PN}/${P}.tar.gz"
+
+LICENSE=GPL-2
+SLOT=0
+
+KEYWORDS="~amd64 ~x86"
+
+IUSE=""
+RESTRICT="mirror"

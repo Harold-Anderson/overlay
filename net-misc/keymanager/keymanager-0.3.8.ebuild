@@ -7,13 +7,16 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils git-r3 distutils-r1
 
-EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
-EGIT_COMMIT="${PV}"
 DESCRIPTION="A Nicknym agent for the LEAP project"
 HOMEPAGE="https://leap.se/pt/docs/design/nicknym"
-KEYWORDS="~amd64 ~x86"
+
+EGIT_REPO_URI="https://github.com/leapcode/keymanager.git"
+EGIT_COMMIT="${PV}"
+
 LICENSE=GPL-3
 SLOT=0
+
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
 	net-misc/leap_pycommon[${PYTHON_USEDEP}]

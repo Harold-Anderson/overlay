@@ -7,12 +7,14 @@ EAPI=5
 inherit flag-o-matic eutils git-r3
 
 DESCRIPTION="Like SQLite but encrypted"
-EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
-EGIT_COMMIT="v${PV}"
 HOMEPAGE="http://sqlcipher.net/"
-KEYWORDS="~amd64 ~x86"
+EGIT_REPO_URI="https://github.com/sqlcipher/sqlcipher.git"
+EGIT_COMMIT="v${PV}"
+
 LICENSE=ZETETIC
 SLOT=0
+
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}

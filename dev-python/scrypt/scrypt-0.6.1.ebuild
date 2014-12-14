@@ -9,11 +9,13 @@ inherit distutils-r1
 
 DESCRIPTION="Bindings for the scrypt key derivation function library"
 HOMEPAGE="http://bitbucket.org/mhallin/py-scrypt"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+
 LICENSE=BSD-2
 SLOT=0
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 

@@ -13,12 +13,14 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="rpc services for Google's protocol buffer"
 HOMEPAGE="http://code.google.com/p/protobuf-socket-rpc/"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/p/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE=MIT
 SLOT=0
-S="${WORKDIR}/${MY_P}"
-SRC_URI="mirror://pypi/p/${MY_PN}/${MY_P}.tar.gz"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND="dev-libs/protobuf[python,${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"
+
+S="${WORKDIR}/${MY_P}"

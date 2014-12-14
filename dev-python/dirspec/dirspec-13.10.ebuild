@@ -11,10 +11,12 @@ MY_PV=$(replace_version_separator 1 '-')
 
 DESCRIPTION="Support for handling directories per XDG Base Directory and User Folders specifications"
 HOMEPAGE="https://launchpad.net/u1db"
-LICENSE=LGPL-3
-KEYWORDS="~amd64 ~x86"
-SLOT=0
 SRC_URI="https://launchpad.net/${PN}/stable-${MY_PV}/${PV}/+download/${PN}-${PV}.tar.gz"
+
+LICENSE=LGPL-3
+SLOT=0
+
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="${PYTHON_DEPS}"
 

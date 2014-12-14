@@ -10,11 +10,12 @@ inherit distutils-r1 python-r1
 
 DESCRIPTION="DB-API 2.0 interface for SQLite 3.x"
 HOMEPAGE="https://github.com/ghaering/pysqlite"
-IUSE="examples"
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+
 LICENSE=ZLIB
 SLOT=0
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+KEYWORDS="~amd64 ~x86"
+IUSE="examples"
 
 DEPEND=">=dev-db/sqlite-3.3.8:3"
 RDEPEND=${DEPEND}

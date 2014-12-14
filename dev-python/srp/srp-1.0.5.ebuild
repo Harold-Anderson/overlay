@@ -9,11 +9,12 @@ inherit distutils-r1
 
 DESCRIPTION="Secure Remote Password"
 HOMEPAGE="http://code.google.com/p/pysrp/"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${PV}.tar.gz"
+
 LICENSE=BSD
 SLOT=0
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${PV}.tar.gz"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}"

@@ -10,11 +10,14 @@ inherit distutils-r1
 
 DESCRIPTION="3000 times faster than chardet"
 HOMEPAGE="https://github.com/PyYoshi/cChardet"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/c/${PN}/${P}.tar.gz"
+
 LICENSE="MIT"
 SLOT=0
-SRC_URI="mirror://pypi/c/cchardet/cchardet-0.3.5.tar.gz"
+
+KEYWORDS="~amd64 ~x86"
+
+IUSE=""
 
 DEPEND="dev-python/cython[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"

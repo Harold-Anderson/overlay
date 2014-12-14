@@ -9,11 +9,12 @@ inherit distutils-r1
 
 DESCRIPTION="Thread implementation that executes a repetitive task without the need to start up a new thread"
 HOMEPAGE="https://github.com/tkuhlman/taskthread"
-IUSE=""
-KEYWORDS="~amd64 ~x86"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${PV}.tar.gz"
+
 LICENSE=Apache-2.0
 SLOT=0
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${PV}.tar.gz"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}"

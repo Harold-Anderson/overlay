@@ -7,18 +7,18 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="Generic Transparent Proxies"
-HOMEPAGE="https://pypi.python.org/pypi/${MY_PN}"
-
-IUSE="doc"
-KEYWORDS="~x86 ~amd64"
-LICENSE="ZPL"
-
 MY_PN="zope.proxy"
 MY_P="${MY_PN}-${PV}"
 
-SLOT="0"
+DESCRIPTION="Generic Transparent Proxies"
+HOMEPAGE="https://pypi.python.org/pypi/${MY_PN}"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
+LICENSE="ZPL"
+SLOT="0"
+
+KEYWORDS="~x86 ~amd64"
+IUSE="doc"
 
 RDEPEND="dev-python/zope-interface[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}

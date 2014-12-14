@@ -8,12 +8,15 @@ PYTHON_COMPAT=( python2_7 )
 inherit eutils git-r3 distutils-r1
 
 DESCRIPTION="Common utilities for leap python modules"
-EGIT_REPO_URI="https://github.com/leapcode/${PN}.git"
-EGIT_COMMIT=${PV}
 HOMEPAGE="https://leap.se"
-KEYWORDS="~amd64 ~x86"
+
+EGIT_REPO_URI="https://github.com/leapcode/leap_pycommon.git"
+EGIT_COMMIT=${PV}
+
 LICENSE=GPL-3
 SLOT=0
+
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/protobuf-2.4.1[python,${PYTHON_USEDEP}]
 	dev-python/protobuf-socketrpc[${PYTHON_USEDEP}]
