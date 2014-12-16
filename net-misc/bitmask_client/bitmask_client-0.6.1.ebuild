@@ -87,10 +87,6 @@ python_compile_all() {
 }
 
 python_install() {
-	set -x
-	cp pkg/linux/bitmask-root /usr/sbin
-	cp pkg/linux/polkit/se.leap.bitmask.policy /usr/share/polkit-1/actions/
-	set +x
 	doexe pkg/linux/bitmask-root
 	insinto /usr/share/polkit-1/actions
 	doins "${S}/pkg/linux/polkit/se.leap.bitmask.policy"
