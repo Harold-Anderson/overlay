@@ -2,6 +2,16 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ck-sources-3.18.1 (17 Dec 2014)
+*ck-sources-3.17.7 (17 Dec 2014)
+*ck-sources-3.14.27 (17 Dec 2014)
+*ck-sources-3.10.63 (17 Dec 2014)
+
+  17 Dec 2014; Harold Naparst <harold@alum.mit.edu> +ck-sources-3.10.63.ebuild,
+  +ck-sources-3.14.27.ebuild, +ck-sources-3.17.7.ebuild,
+  +ck-sources-3.18.1.ebuild:
+  Add ck-sources-3.{10.63,18.1,14.27,17.7}
+
 *ck-sources-3.18.0 (11 Dec 2014)
 
   11 Dec 2014; Harold Naparst <harold@alum.mit.edu> +ck-sources-3.18.0.ebuild:
