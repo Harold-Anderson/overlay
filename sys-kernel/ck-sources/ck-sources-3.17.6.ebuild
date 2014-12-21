@@ -6,6 +6,7 @@ EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
 IUSE="bfsonly"
+SLOT="${PV}"
 
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
