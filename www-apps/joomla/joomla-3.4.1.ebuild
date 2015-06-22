@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit webapp depend.php versionator
+inherit webapp versionator
 
 MY_PV=$(replace_version_separator '_' '-')
 
