@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="app-crypt/letsencrypt[${PYTHON_USEDEP}]
