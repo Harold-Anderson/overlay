@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -47,7 +47,7 @@ src_test() {
 	testing() {
 		python_execute PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" -c "from test import test; import sys; sys.exit(test())"
 	}
-	python_execute_function testing
+	python_foreach_impl testing
 }
 
 src_install() {
@@ -58,7 +58,7 @@ src_install() {
 	delete_tests() {
 		rm -r "${ED}$(python_get_sitedir)/pysqlite2/test"
 	}
-	python_execute_function -q delete_tests
+	python_foreach_impl -q delete_tests
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
