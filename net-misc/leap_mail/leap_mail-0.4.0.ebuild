@@ -18,6 +18,7 @@ SLOT=0
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-python/zope-interface[${PYTHON_USEDEP}]
+	dev-python/service_identity[${PYTHON_USEDEP}]
 	>=net-misc/soledad-client-0.4.5[${PYTHON_USEDEP}]
 	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
 	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
