@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -30,4 +30,4 @@ python_prepare_all() {
 
 python_test() {
 	esetup.py test
-} 
+}
