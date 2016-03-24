@@ -32,10 +32,10 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/oauth[${PYTHON_USEDEP}]
 	~dev-python/pyzmq-14.7.0[bundled,${PYTHON_USEDEP}]
-	>=net-misc/leap_mail-0.3.9[${PYTHON_USEDEP}]
-	>=net-misc/soledad-client-0.5.0[${PYTHON_USEDEP}]
-	>=net-misc/leap_pycommon-0.3.7[${PYTHON_USEDEP}]
-	>=net-misc/keymanager-0.3.8[${PYTHON_USEDEP}]
+	>=net-misc/leap_mail-0.4.0[${PYTHON_USEDEP}]
+	>=net-misc/soledad-client-0.7.4[${PYTHON_USEDEP}]
+	>=net-misc/leap_pycommon-0.5.0[${PYTHON_USEDEP}]
+	>=net-misc/keymanager-0.4.3[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}
