@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>python</herd>
-  <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>harold@alum.mit.edu</email>
+    <email>harold@naparst.com</email>
     <name>Harold Naparst</name>
   </maintainer>
 </pkgmetadata>

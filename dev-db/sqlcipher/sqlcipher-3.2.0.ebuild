@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -11,12 +11,12 @@ HOMEPAGE="http://sqlcipher.net/"
 EGIT_REPO_URI="https://github.com/sqlcipher/sqlcipher.git"
 EGIT_COMMIT="v${PV}"
 
-LICENSE=ZETETIC
+LICENSE=BSD
 SLOT=0
 
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-libs/openssl"
+RDEPEND="dev-libs/openssl:0"
 DEPEND="${RDEPEND}
 	dev-lang/tcl"
 

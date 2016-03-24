@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,7 @@ inherit distutils-r1 versionator eutils
 
 MY_PV=$(replace_version_separator 1 '-')
 
-DESCRIPTION="Support for handling directories per XDG Base Directory and User Folders specifications"
+DESCRIPTION="Support for handling directories per XDG Base Directory and User Folders spec"
 HOMEPAGE="https://launchpad.net/u1db"
 SRC_URI="https://launchpad.net/${PN}/stable-${MY_PV}/${PV}/+download/${PN}-${PV}.tar.gz"
 

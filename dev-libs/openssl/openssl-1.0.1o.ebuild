@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1o.ebuild,v 1.9 2015/06/17 19:09:39 zlogene Exp $
+# $Id$
 
 EAPI="4"
 
@@ -39,11 +39,6 @@ PDEPEND="app-misc/ca-certificates"
 src_unpack() {
 	unpack ${P}.tar.gz
 	SSL_CNF_DIR="/etc/ssl"
-	sed \
-		-e "/^DIR=/s:=.*:=${EPREFIX}${SSL_CNF_DIR}:" \
-		-e "s:SSL_CMD=/usr:SSL_CMD=${EPREFIX}/usr:" \
-		"${DISTDIR}"/${PN}-c_rehash.sh.${REV} \
-		> "${WORKDIR}"/c_rehash || die #416717
 }
 
 MULTILIB_WRAPPED_HEADERS=(
@@ -68,7 +63,12 @@ src_prepare() {
 
 	# disable fips in the build
 	# make sure the man pages are suffixed #302165
-	# don't bother building man pages if they're disabled
+	# don't bother building man pages if they're disabled	
+	sed \
+		-e "/^DIR=/s:=.*:=${EPREFIX}${SSL_CNF_DIR}:" \
+		-e "s:SSL_CMD=/usr:SSL_CMD=${EPREFIX}/usr:" \
+		"${DISTDIR}"/${PN}-c_rehash.sh.${REV} \
+		> "${WORKDIR}"/c_rehash || die #416717
 	sed -i \
 		-e '/DIRS/s: fips : :g' \
 		-e '/^MANSUFFIX/s:=.*:=ssl:' \
@@ -246,7 +246,6 @@ multilib_src_install_all() {
 
 pkg_preinst() {
 	has_version ${CATEGORY}/${PN}:0.9.8 && return 0
-	preserve_old_lib /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.8
 }
 
 pkg_postinst() {
@@ -255,5 +254,4 @@ pkg_postinst() {
 	eend $?
 
 	has_version ${CATEGORY}/${PN}:0.9.8 && return 0
-	preserve_old_lib_notify /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.8
 }

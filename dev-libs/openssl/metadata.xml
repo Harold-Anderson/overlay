@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>base-system</herd>
 <maintainer>
-<email>harold@alum.mit.edu</email>
+<email>harold@naparst.com</email>
 </maintainer>
-<natural-name>OpenSSL</natural-name>
+<natural-name>Harold Naparst</natural-name>
 <longdescription>OpenSSL with enable-ec_nistp_64_gcc_128 turned on.</longdescription>
 <use>
  <flag name='nist'>Enable 64-bit optimized implementation of the NIST/SECG elliptic curve P-224</flag>

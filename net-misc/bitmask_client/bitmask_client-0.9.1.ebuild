@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -79,6 +79,14 @@ pkg_setup() {
 			ewarn "${msg}"
 		fi
 
+		# Check for IP_NF_NAT
+		local msg=""
+		for i in IP_NF_NAT  ; do
+			if ! linux_chkconfig_present ${i}; then
+				eerror "There is no IP{,_NF}_NAT support in your kernel."
+				die "Please build your kernel with this support."
+			fi
+		done
 		# Check for TUN
 		local msg=""
 		for i in TUN ; do
@@ -110,4 +118,5 @@ python_install() {
 	insinto /usr/share/polkit-1/actions
 	doins "${S}/pkg/linux/polkit/se.leap.bitmask.policy"
 	distutils-r1_python_install
+	dosym /bin/ip /sbin/ip
 }

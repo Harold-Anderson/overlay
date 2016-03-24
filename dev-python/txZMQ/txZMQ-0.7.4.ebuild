@@ -32,7 +32,6 @@ python_prepare_all() {
 
 python_compile() {
 	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	${PYTHON} setup.py build 
+	${PYTHON} setup.py build
 	distutils-r1_python_compile
 }
-
