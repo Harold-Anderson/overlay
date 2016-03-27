@@ -20,8 +20,6 @@ DEPEND=""
 RDEPEND="dev-lang/php[curl?,filter,gd,hash,json,mysql?,pcntl,pdo,posix,postgres?,session,simplexml,sqlite?,xmlreader,xmlwriter,zip]
 	virtual/httpd-php"
 
-S=${WORKDIR}/${PN}
-
 pkg_setup() {
 	webapp_pkg_setup
 }
