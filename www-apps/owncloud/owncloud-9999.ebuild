@@ -4,11 +4,10 @@
 
 EAPI=6
 
-inherit git-2 eutils webapp
+inherit git-r3 eutils webapp
 
 DESCRIPTION="Web-based storage application where all your data is under your own control"
 HOMEPAGE="http://owncloud.org"
-SRC_URI="http://download.owncloud.org/community/${P}.tar.bz2 -> ${PF}.tar.bz2"
 EGIT_REPO_URI="https://github.com/owncloud/core.git"
 EGIT_BRANCH="master"
 LICENSE="AGPL-3"
@@ -18,7 +17,7 @@ IUSE="+curl mysql postgres +sqlite"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DEPEND=""
-RDEPEND="dev-lang/php[curl?,filter,gd,hash,json,mysql?,pdo,posix,postgres?,session,simplexml,sqlite?,xmlreader,xmlwriter,zip]
+RDEPEND="dev-lang/php[curl?,filter,gd,hash,json,mysql?,pcntl,pdo,posix,postgres?,session,simplexml,sqlite?,xmlreader,xmlwriter,zip]
 	virtual/httpd-php"
 
 S=${WORKDIR}/${PN}
