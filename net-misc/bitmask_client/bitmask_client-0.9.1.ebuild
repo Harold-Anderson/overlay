@@ -5,6 +5,7 @@
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="sqlite"
 
 inherit eutils git-r3 distutils-r1 linux-info versionator
 
