@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>perl@gentoo.org</email>
+    <name>Gentoo Perl Project</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="cpan">Finance-QuoteHist</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::BusinessWeek</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::DailyFinance</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::Generic</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::Google</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::StockNod</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::Yahoo</remote-id>
+    <remote-id type="cpan-module">Finance::QuoteHist::Yahoo::Australia</remote-id>
+  </upstream>
+</pkgmetadata>
