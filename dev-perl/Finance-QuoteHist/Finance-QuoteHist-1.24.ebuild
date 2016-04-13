@@ -21,6 +21,7 @@ RDEPEND="
 	dev-perl/CGI
 	virtual/perl-Carp
 	dev-perl/DateTime
+	dev-perl/Text-CSV
 	virtual/perl-Encode
 	virtual/perl-Exporter
 	dev-perl/HTML-Parser
