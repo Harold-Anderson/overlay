@@ -64,10 +64,6 @@ src_prepare() {
 	# Skip test that needs some locales to be present
 	sed -i -e '/test_suite_gnc_date/d' src/libqof/qof/test/test-qof.c || die
 
-	# Fix automagic on guile detection
-	# https://bugzilla.gnome.org/show_bug.cgi?id=760015
-	epatch "${FILESDIR}"/${PN}-2.6.9-automagic-guile.patch
-
 	eautoreconf
 	gnome2_src_prepare
 }
