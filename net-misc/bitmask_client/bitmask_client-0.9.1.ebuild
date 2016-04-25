@@ -119,5 +119,7 @@ python_install() {
 	insinto /usr/share/polkit-1/actions
 	doins "${S}/pkg/linux/polkit/se.leap.bitmask.policy"
 	distutils-r1_python_install
-	dosym /bin/ip /sbin/ip
+	if ! [[ -e "/bin/ip" ]]; then
+	   dosym /bin/ip /sbin/ip
+	fi
 }
