@@ -12,7 +12,7 @@ MY_PN=protobuf.socketrpc
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="rpc services for Google's protocol buffer"
-HOMEPAGE="http://code.google.com/p/protobuf-socket-rpc/"
+HOMEPAGE="https://github.com/sdeo/protobuf-socket-rpc/"
 SRC_URI="mirror://pypi/p/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE=MIT
