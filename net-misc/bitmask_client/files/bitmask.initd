@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Id$
+
+depend() {
+    need localmount net
+    after bootmisc
+}
+
+start() {
+    ebegin "Starting bitmask"
+    start-stop-daemon -x bitmask
+    eend 0
+}
+
+stop() {
+    local retval=0
+    ebegin "Stopping bitmask"
+	start-stop-daemon --stop -n bitmask
+    eend ${retval}
+}
+
