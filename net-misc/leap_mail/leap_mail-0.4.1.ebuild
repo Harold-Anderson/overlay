@@ -27,3 +27,7 @@ RDEPEND="dev-python/zope-interface[${PYTHON_USEDEP}]
 	dev-python/twisted-web[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}"
+
+distutils-r1_python_prepare() {
+dosym CHANGELOG.rst CHANGELOG
+}
