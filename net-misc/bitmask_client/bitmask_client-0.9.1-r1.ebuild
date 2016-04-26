@@ -120,6 +120,7 @@ python_install() {
 	doins "${S}/pkg/linux/polkit/se.leap.bitmask.policy"
 	distutils-r1_python_install
 	newinitd "${FILESDIR}"/bitmask.initd bitmask
+	fperms 755 /etc/init.d/bitmask
 
 if ! [[ -e "/sbin/ip" ]]; then
 	   dosym /bin/ip /sbin/ip
