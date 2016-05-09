@@ -4,19 +4,10 @@
 
 EAPI=5
 PYTHON_COMPAT=(python{2_7,3_4,3_5})
+inherit git-r3 distutils-r1
 
-if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="https://github.com/letsencrypt/letsencrypt.git"
-	inherit git-r3
-	KEYWORDS=""
-	S=${WORKDIR}/${P}/${PN}
-else
-	SRC_URI="https://github.com/letsencrypt/letsencrypt/archive/v${PV}.tar.gz -> letsencrypt-${PV}.tar.gz"
-	KEYWORDS="~amd64 ~arm"
-	S=${WORKDIR}/letsencrypt-${PV}/acme
-fi
-
-inherit distutils-r1
+EGIT_REPO_URI="https://github.com/letsencrypt/letsencrypt.git"
+EGIT_COMMIT="v${PV}"
 
 DESCRIPTION="An implementation of the ACME protocol"
 HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://letsencrypt.org/"
@@ -36,6 +27,13 @@ RDEPEND=">=dev-python/cryptography-0.8[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="test? ( ${RDEPEND} dev-python/nose[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
+
+S=${WORKDIR}/${P}/${PN}
+
+src_unpack() {
+	git-r3_fetch
+	git-r3_checkout
+}
 
 python_test() {
 	nosetests -w ${PN} || die
