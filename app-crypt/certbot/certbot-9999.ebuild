@@ -6,7 +6,7 @@ EAPI=5
 PYTHON_COMPAT=(python2_7)
 
 if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="https://github.com/letsencrypt/letsencrypt.git"
+	EGIT_REPO_URI="https://github.com/certbot/certbot.git"
 	inherit git-r3
 	KEYWORDS=""
 else
@@ -17,7 +17,7 @@ fi
 inherit distutils-r1
 
 DESCRIPTION="Let's encrypt client to automate deployment of X.509 certificates"
-HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://letsencrypt.org/"
+HOMEPAGE="https://github.com/certbot/certbot https://certbot.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
