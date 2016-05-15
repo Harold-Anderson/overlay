@@ -18,6 +18,7 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="app-crypt/certbot[${PYTHON_USEDEP}]
+	www-servers/apache[ssl]
 	app-crypt/acme[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/python-augeas[${PYTHON_USEDEP}]
