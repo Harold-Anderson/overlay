@@ -3,10 +3,9 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=(python{2_7,3_4,3_5})
+PYTHON_COMPAT=(python2_7)
 inherit git-r3 distutils-r1
 KEYWORDS="~amd64 ~arm"
-
 EGIT_REPO_URI="https://github.com/letsencrypt/letsencrypt.git"
 EGIT_COMMIT="v${PV}"
 
