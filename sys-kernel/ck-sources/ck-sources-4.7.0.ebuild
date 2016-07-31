@@ -65,7 +65,7 @@ CK_INCP_LIST=""
 #-- Local patches needed for the ck-patches to apply smoothly -------
 
 PRE_CK_FIX=""
-POST_CK_FIX=""
+POST_CK_FIX="${FILESDIR}/ck-sources-4.7.0-SMT_NICE_P0.patch"
 
 #--
 
