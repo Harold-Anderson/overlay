@@ -113,6 +113,11 @@ pkg_postinst() {
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"
 	elog "Be sure the database is started first."
+	elog "   "
+	elog "Please note that the configuration file is /etc/odoo/odoo.cfg"
+	elog "You need to modify the parameters in that file before starting the service."
+	elog "In particular, the database user and password you chose when you ran emerge --config "
+	elog "in the previous step need to be reflected in the config file."
 }
 
 psqlquery() {

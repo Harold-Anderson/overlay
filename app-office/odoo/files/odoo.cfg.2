@@ -3,7 +3,7 @@
 # General options:
 admin_passwd = admin
 
-pidfile = /run/openerp/openerp-server.pid
+pidfile = /var/run/odoo/odoo-server.pid
 interface =
 port = 8069
 netinterface =
@@ -26,7 +26,7 @@ secure_cert_file = server.cert
 secure_pkey_file = server.pkey
 
 # Logging Configuration:
-logfile = /var/log/openerp/openerp-server.log
+logfile = /var/log/odoo/odoo-server.log
 syslog = False
 log_level = debug
 
@@ -40,7 +40,7 @@ smtp_password = False
 
 # pg_path points at local pg instance - please change as needed
 # Database related options:
-db_user = openerp
+db_user = odoo
 db_password = change_this
 pg_path = /run/postgresql/.s.PGSQL.5432
 db_name = False
@@ -59,7 +59,6 @@ translate_modules = ['all']
 list_db = True
 server_actions_allow_code = False
 
-addons_path = /usr/openerp/addons
 
 
 

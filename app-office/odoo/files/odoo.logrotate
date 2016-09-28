@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-/var/log/openerp/*.log {
+/var/log/odoo/*.log {
  monthly
- create 660 openerp openerp
+ create 660 odoo odoo
  missingok
  copytruncate
 }
