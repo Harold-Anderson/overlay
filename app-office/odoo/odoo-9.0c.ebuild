@@ -42,6 +42,7 @@ DEPEND="postgres? ( dev-db/postgresql:*[server] )
 	dev-python/pychart[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/reportlab[${PYTHON_USEDEP}]
+	dev-python/wsgiref[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]
 	media-gfx/pydot
 	dev-python/vobject[${PYTHON_USEDEP}]
@@ -49,6 +50,8 @@ DEPEND="postgres? ( dev-db/postgresql:*[server] )
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/Babel[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/gdata[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	dev-python/python-openid[${PYTHON_USEDEP}]
@@ -60,7 +63,6 @@ DEPEND="postgres? ( dev-db/postgresql:*[server] )
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	dev-python/vatnumber[${PYTHON_USEDEP}]
 	dev-python/zsi[${PYTHON_USEDEP}]
-	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/unittest2[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]
