@@ -13,11 +13,11 @@ HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches/
 K_WANT_GENPATCHES="base extras experimental"
 K_EXP_GENPATCHES_PULL="1"
 K_EXP_GENPATCHES_NOUSE="1"
-K_GENPATCHES_VER="6"
+K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
-inherit kernel-2
+inherit kernel-2 versionator
 detect_version
 detect_arch
 
@@ -32,18 +32,19 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="5"
-BFS_VERSION="502"
-MUQSS_VERSION="103"
+CK_VERSION="1"
+BFS_VERSION="512"
+MUQSS_VERSION="107"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.xz"
-MUQSS_FILE="bfs${BFS_VERSION}-MuQSS_${MUQSS_VERSION}.patch"
+MUQSS_FILE="bfs${BFS_VERSION}-muqss${MUQSS_VERSION}.patch"
+#MUQSS_FILE="${K_BRANCH_ID}-sched-MuQSS_${MUQSS_VERSION}.patch"
 #BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
 
 CK_BASE_URL="http://ck.kolivas.org/patches/4.0"
 CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}/${K_BRANCH_ID}-ck${CK_VERSION}"
 CK_URI="${CK_LVER_URL}/${CK_FILE}"
-MUQSS_URL="http://ck.kolivas.org/patches/bfs/4.0/${K_BRANCH_ID}/Testing"
+MUQSS_URL="http://ck.kolivas.org/patches/muqss/4.0/${K_BRANCH_ID}"
 #BFS_URI="${CK_LVER_URL}/patches/${BFS_FILE}"
 
 #-- Build extra incremental patches list --------------------------------------
