@@ -8,8 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
-		<flag name='muqss'>Multiple Queue Skiplist Scheduler.</flag>
-		<flag name='bfsonly'>Only apply BFS patch (may use with muqss).</flag>
 	</use>
 	<upstream>
 		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
