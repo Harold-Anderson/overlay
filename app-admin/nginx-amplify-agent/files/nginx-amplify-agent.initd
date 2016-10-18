@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+
+prog="nginx-amplify-agent"
+exe=/usr/bin/nginx-amplify-agent.py
+pid=/var/run/amplify-agent/amplify-agent.pid
+conf=/etc/amplify-agent/agent.conf
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting $prog"
+    start-stop-daemon --user nginx --start --exec $exe -- start --config=$conf --pid=$pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping $prog"
+    start-stop-daemon --stop --pidfile $pid
+    eend $?
+}
