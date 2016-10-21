@@ -5,25 +5,24 @@
 EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
-IUSE=
 
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches/
-	http://ck.kolivas.org/"
+	http://users.tpg.com.au/ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras experimental"
 K_EXP_GENPATCHES_PULL="1"
 K_EXP_GENPATCHES_NOUSE="1"
-K_GENPATCHES_VER="2"
+K_GENPATCHES_VER="3"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
-inherit kernel-2 versionator
+inherit kernel-2
 detect_version
 detect_arch
 
 K_BRANCH_ID="${KV_MAJOR}.${KV_MINOR}"
 
-DESCRIPTION="Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' patchset and Gentoo's genpatches"
+DESCRIPTION="Con Kolivas' high performance patchset and Gentoo's genpatches for Linux ${K_BRANCH_ID}"
 
 #-- If Gentoo-Sources don't follow then extra incremental patches are needed -
 
@@ -32,12 +31,12 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="110"
+CK_VERSION="2"
 
-CK_FILE="${K_BRANCH_ID}-sched-MuQSS_${CK_VERSION}.patch"
+CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.xz"
 
-CK_BASE_URL="http://ck.kolivas.org/patches/muqss/4.0"
-CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}"
+CK_BASE_URL="http://ck.kolivas.org/patches/4.0"
+CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}/${K_BRANCH_ID}-ck${CK_VERSION}"
 CK_URI="${CK_LVER_URL}/${CK_FILE}"
 
 #-- Build extra incremental patches list --------------------------------------
@@ -55,8 +54,8 @@ fi
 
 #-- CK needs sometimes to patch itself... ---------------------------
 
-CK_INCP_URI=
-CK_INCP_LIST=
+CK_INCP_URI=""
+CK_INCP_LIST=""
 
 #-- Local patches needed for the ck-patches to apply smoothly -------
 
@@ -65,9 +64,10 @@ POST_CK_FIX=""
 
 #--
 
-SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_URI}"
+SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_INCP_URI} ${CK_URI}"
 
-UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${UNIPATCH_LIST_GENPATCHES} ${DISTDIR}/${CK_FILE}"
+UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}/${CK_FILE} ${CK_INCP_LIST} ${POST_CK_FIX}"
+UNIPATCH_STRICTORDER="yes"
 
 #-- Since experimental genpatches && we want BFQ irrespective of experimental -
 
@@ -78,11 +78,6 @@ src_prepare() {
 #-- Comment out CK's EXTRAVERSION in Makefile ---------------------------------
 
 	sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile"
-
-UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
-
-UNIPATCH_STRICTORDER="yes"
-
 }
 
 pkg_postinst() {
