@@ -24,6 +24,7 @@ IUSE="+postgres ldap ssl"
 DEPEND="postgres? ( dev-db/postgresql:*[server] )
 	dev-python/markupsafe[${PYTHON_USEDEP}]
 	dev-python/argparse
+	media-gfx/wkhtmltopdf
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/pyserial[${PYTHON_USEDEP}]
 	dev-python/pyPdf[${PYTHON_USEDEP}]
@@ -89,7 +90,7 @@ python_prepare_all() {
 }
 
 python_install_all() {
-        python_export_best
+		     python_export_best
 	distutils-r1_python_install_all
 
 	newinitd "${FILESDIR}/${PN}-10" "${PN}"
