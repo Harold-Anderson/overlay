@@ -31,7 +31,7 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="6"
+CK_VERSION="7"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.xz"
 
