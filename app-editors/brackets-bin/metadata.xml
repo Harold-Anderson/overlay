@@ -7,6 +7,6 @@
 		<description>Active Maintainer, Assign bugs</description>
 	</maintainer>
 	<use>
-	  <flag name='chromium'>Use chromium</flag>
+	  <flag name="live_preview">Enable live editing using chromium/google-chrome</flag>
 	</use>
 </pkgmetadata>
