@@ -1,73 +1,99 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
-DESCRIPTION="open source code editor for web designers and front-end developers"
-HOMEPAGE="http://brackets.io"
-SRC_URI="amd64?	( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb )
-	x86?	( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb )"
+inherit eutils unpacker gnome2-utils xdg-utils
 
+DESCRIPTION="A code editor for HTML, CSS and JavaScript"
+HOMEPAGE="http://brackets.io/"
+
+SRC_URI="
+	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb )
+	x86?   ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb )"
+
+KEYWORDS="~amd64 ~x86"
+RESTRICT="mirror"
 LICENSE="MIT"
+IUSE="live_preview"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="chromium"
 
-RDEPEND="
->=dev-libs/openssl-0.9.7d
->=gnome-base/gconf-2.31.1
->=media-libs/alsa-lib-1.0.23
->=dev-libs/atk-1.12.4
->=x11-libs/cairo-1.6.0
->=net-print/cups-1.4.0
->=sys-apps/dbus-1.2.14
->=dev-libs/expat-1.95.8
->=media-libs/fontconfig-2.8.0
->=media-libs/freetype-2.3.9
->=sys-devel/gcc-4.1.1
-dev-libs/libgcrypt:11/11
->=x11-libs/gdk-pixbuf-2.22.0
->=dev-libs/glib-2.18.0
->=x11-libs/gtk+-2.24.0
->=dev-libs/nspr-1.8.0.10
->=dev-libs/nss-3.12.6
->=x11-libs/pango-1.22.0
->=virtual/libudev-198
->=x11-libs/libX11-1.4.99.1
->=x11-libs/libXcomposite-0.3-r1
->=x11-libs/libXdamage-1.1
-x11-libs/libXext
-x11-libs/libXfixes
->=x11-libs/libXrandr-1.2.0
-x11-libs/libXrender
-app-misc/ca-certificates
-net-misc/curl
->=x11-misc/xdg-utils-1.0.2
-net-misc/wget
-chromium? ( www-client/chromium )
->=app-arch/deb2targz-1-r2"
-
-DEPEND="sys-devel/binutils"
+DEPEND=""
+RDEPEND="${DEPEND}
+	>=dev-libs/atk-1.12.4
+	>=dev-libs/expat-1.95.8
+	>=dev-libs/glib-2.18.0:2
+	>=dev-libs/nspr-1.8.0.10
+	>=dev-libs/nss-3.12.6
+	>=dev-libs/openssl-1.0.2k:0
+	>=gnome-base/gconf-2.31.1
+	>=media-libs/alsa-lib-1.0.23
+	>=media-libs/fontconfig-2.8.0
+	>=media-libs/freetype-2.3.9
+	>=net-print/cups-1.4.0
+	>=sys-apps/dbus-1.2.14
+	>=sys-devel/gcc-4.1.1
+	>=virtual/libudev-198
+	>=x11-libs/cairo-1.6.0
+	>=x11-libs/gdk-pixbuf-2.22.0
+	>=x11-libs/gtk+-2.24.0:2
+	>=x11-libs/pango-1.22.0
+	>=x11-libs/libX11-1.4.99.1
+	>=x11-libs/libXcomposite-0.3-r1
+	>=x11-libs/libXdamage-1.1
+	>=x11-libs/libXrandr-1.2.0
+	>=x11-misc/xdg-utils-1.0.2
+	app-misc/ca-certificates
+	net-misc/curl
+	x11-libs/libXext
+	x11-libs/libXfixes
+	x11-libs/libXrender
+	live_preview? (
+		|| ( www-client/chromium www-client/google-chrome )
+	)"
 
 S="${WORKDIR}"
 
-src_unpack() {
-	echo "*** A = ${A}"
-	#unpack ${A}
-	ls -la "${DISTDIR}"
-	ln -sf "${DISTDIR}"/${A} ${A}
-	ls -la
-	deb2targz ${A} || exit 1
-	rm -f ${A}
-	mv Brackets.Release.${PV}.64-bit.tar.xz data.tar.xz || exit 1
-	echo "*** After unpack ***"
+src_install() {
+	local my_pn="${PN%%-bin}"
+	local s_libs="libnspr4.so.0d libplds4.so.0d libplc4.so.0d libssl3.so.1d \
+		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
+
+	# Cleanup
+	rm -rf usr/share/menu || die "Failed to install!"
+
+	# Fix: https://github.com/adobe/brackets/issues/13731
+	#      https://github.com/adobe/brackets/issues/13738
+	chmod 4755 opt/brackets/chrome-sandbox || die "Failed to install!"
+
+	# Unfortunately, i can't fix warning message "QA Notice: The following files 
+	# contain writable and executable sections"
+	cp -R . "${D}"
+
+	# Install symlinks (dev-libs/nss, dev-libs/nspr, dev-libs/openssl, etc...)
+	for f in ${s_libs}; do
+		target=$(echo ${f} | sed 's/\.[01]d$//')
+		[ -f "/usr/lib/${target}" ] && dosym /usr/lib/${target} /opt/brackets/${f} || die "Failed to install!"
+	done
+	dosym /usr/lib/libudev.so /opt/brackets/libudev.so.0
+
+	make_desktop_entry \
+		"/usr/bin/${my_pn}" \
+		"Brackets" \
+		"${my_pn}" \
+		"TextEditor;Development;" \
+		"MimeType=text/html;\nKeywords=Text;Editor;Write;Web;Development;"
 }
 
-src_install() {
-tar xJf data.tar.xz -C "${D}"
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-ln -s /usr/lib/libudev.so /opt/brackets/libudev.so.0
+	xdg_desktop_database_update
+	gnome2_icon_cache_update
+
+	elog
+	elog "See documentation: https://github.com/adobe/brackets/wiki"
+	elog
 }
