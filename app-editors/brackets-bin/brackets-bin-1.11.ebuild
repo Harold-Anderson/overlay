@@ -54,21 +54,29 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"
 
+src_prepare() {
+	default
+
+	# Cleanup
+	rm -rf usr/share/menu
+
+	# Fix: "FATAL:setuid_sandbox_host.cc(162)] 
+	#       The SUID sandbox helper binary was found, but is not configured correctly"
+	chmod 4755 opt/brackets/chrome-sandbox || die "Failed to install!"
+
+	# Fix: https://github.com/adobe/brackets/issues/13731
+	#      https://github.com/adobe/brackets/issues/13738
+	
+}
+
 src_install() {
 	local my_pn="${PN%%-bin}"
 	local s_libs="libnspr4.so.0d libplds4.so.0d libplc4.so.0d libssl3.so.1d \
 		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
 
-	# Cleanup
-	rm -rf usr/share/menu || die "Failed to install!"
-
-	# Fix: https://github.com/adobe/brackets/issues/13731
-	#      https://github.com/adobe/brackets/issues/13738
-	chmod 4755 opt/brackets/chrome-sandbox || die "Failed to install!"
-
 	# Unfortunately, i can't fix warning message "QA Notice: The following files 
 	# contain writable and executable sections"
-	cp -R . "${D}"
+	cp -Rp . "${D}"
 
 	# Install symlinks (dev-libs/nss, dev-libs/nspr, dev-libs/openssl, etc...)
 	for f in ${s_libs}; do
