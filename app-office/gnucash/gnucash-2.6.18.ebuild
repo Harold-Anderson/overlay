@@ -9,7 +9,7 @@ inherit autotools gnome2 python-single-r1
 
 DESCRIPTION="A personal finance manager"
 HOMEPAGE="http://www.gnucash.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="https://www.dropbox.com/s/am36basr27ps4kq/gnucash-2.6.18.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
