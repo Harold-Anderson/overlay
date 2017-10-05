@@ -18,14 +18,18 @@ LICENSE="MIT"
 IUSE="live_preview"
 SLOT="0"
 
+QA_PRESTRIPPED="/opt/brackets/www/node_modules/phantomjs/lib/phantom/bin/phantomjs"
+
 DEPEND=""
 RDEPEND="${DEPEND}
+	|| ( >=virtual/libudev-147 >=virtual/libudev-198 )
 	>=dev-libs/atk-1.12.4
 	>=dev-libs/expat-1.95.8
 	>=dev-libs/glib-2.18.0:2
 	>=dev-libs/nspr-1.8.0.10
 	>=dev-libs/nss-3.12.6
 	>=dev-libs/openssl-1.0.2k:0
+	>=dev-libs/libgcrypt-1.4.5:11
 	>=gnome-base/gconf-2.31.1
 	>=media-libs/alsa-lib-1.0.23
 	>=media-libs/fontconfig-2.8.0
@@ -33,7 +37,6 @@ RDEPEND="${DEPEND}
 	>=net-print/cups-1.4.0
 	>=sys-apps/dbus-1.2.14
 	>=sys-devel/gcc-4.1.1
-	>=virtual/libudev-198
 	>=x11-libs/cairo-1.6.0
 	>=x11-libs/gdk-pixbuf-2.22.0
 	>=x11-libs/gtk+-2.24.0:2
@@ -59,20 +62,12 @@ src_prepare() {
 
 	# Cleanup
 	rm -rf usr/share/menu
-
-	# Fix: "FATAL:setuid_sandbox_host.cc(162)] 
-	#       The SUID sandbox helper binary was found, but is not configured correctly"
-	chmod 4755 opt/brackets/chrome-sandbox || die "Failed to install!"
-
-	# Fix: https://github.com/adobe/brackets/issues/13731
-	#      https://github.com/adobe/brackets/issues/13738
-	
 }
 
 src_install() {
 	local my_pn="${PN%%-bin}"
 	local s_libs="libnspr4.so.0d libplds4.so.0d libplc4.so.0d libssl3.so.1d \
-		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
+    	libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
 
 	# Unfortunately, i can't fix warning message "QA Notice: The following files 
 	# contain writable and executable sections"
