@@ -23,6 +23,7 @@ QA_PRESTRIPPED="/opt/brackets/www/node_modules/phantomjs/lib/phantom/bin/phantom
 DEPEND=""
 RDEPEND="${DEPEND}
 	|| ( >=virtual/libudev-147 >=virtual/libudev-198 )
+	!app-editors/brackets
 	>=dev-libs/atk-1.12.4
 	>=dev-libs/expat-1.95.8
 	>=dev-libs/glib-2.18.0:2
@@ -67,7 +68,7 @@ src_prepare() {
 src_install() {
 	local my_pn="${PN%%-bin}"
 	local s_libs="libnspr4.so.0d libplds4.so.0d libplc4.so.0d libssl3.so.1d \
-    	libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
+		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d libudev.so.0"
 
 	# Unfortunately, i can't fix warning message "QA Notice: The following files 
 	# contain writable and executable sections"
@@ -75,10 +76,9 @@ src_install() {
 
 	# Install symlinks (dev-libs/nss, dev-libs/nspr, dev-libs/openssl, etc...)
 	for f in ${s_libs}; do
-		target=$(echo ${f} | sed 's/\.[01]d$//')
+		target=$(echo ${f} | sed 's/\.[01]d\?$//')
 		[ -f "/usr/lib/${target}" ] && dosym /usr/lib/${target} /opt/brackets/${f} || die "Failed to install!"
 	done
-	dosym /usr/lib/libudev.so /opt/brackets/libudev.so.0
 
 	make_desktop_entry \
 		"/usr/bin/${my_pn}" \
