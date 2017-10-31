@@ -9,8 +9,10 @@ DESCRIPTION="A code editor for HTML, CSS and JavaScript"
 HOMEPAGE="http://brackets.io/"
 
 SRC_URI="
-	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb )
-	x86?   ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb )"
+	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb
+			http://ftp.br.debian.org/debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.5-1_amd64.deb )
+	x86?   ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb
+			http://ftp.br.debian.org/debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.5-1_i386.deb )"
 
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
@@ -18,8 +20,11 @@ LICENSE="MIT"
 IUSE="live_preview"
 SLOT="0"
 
+QA_PRESTRIPPED="/opt/brackets/libpangoft2-1.0.so.0.4000.5"
+
 DEPEND=""
 RDEPEND="${DEPEND}
+	!app-editors/brackets
 	>=dev-libs/atk-1.12.4
 	>=dev-libs/expat-1.95.8
 	>=dev-libs/glib-2.18.0:2
@@ -66,13 +71,16 @@ src_prepare() {
 
 	# Fix: https://github.com/adobe/brackets/issues/13731
 	#      https://github.com/adobe/brackets/issues/13738
-	
+	#
+	# You need downgrade x11-libs/pango to 1.40.5 or download libpangoft2-1.0-0_1.40.5-1_****.deb
+	mv usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.5 opt/brackets/ \
+		&& rm -r usr/lib/ || die
 }
 
 src_install() {
 	local my_pn="${PN%%-bin}"
 	local s_libs="libnspr4.so.0d libplds4.so.0d libplc4.so.0d libssl3.so.1d \
-		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d"
+		libnss3.so.1d libsmime3.so.1d libnssutil3.so.1d libudev.so.0"
 
 	# Unfortunately, i can't fix warning message "QA Notice: The following files 
 	# contain writable and executable sections"
@@ -80,10 +88,13 @@ src_install() {
 
 	# Install symlinks (dev-libs/nss, dev-libs/nspr, dev-libs/openssl, etc...)
 	for f in ${s_libs}; do
-		target=$(echo ${f} | sed 's/\.[01]d$//')
+		target=$(echo ${f} | sed 's/\.[01]d\?$//')
 		[ -f "/usr/lib/${target}" ] && dosym /usr/lib/${target} /opt/brackets/${f} || die "Failed to install!"
 	done
-	dosym /usr/lib/libudev.so /opt/brackets/libudev.so.0
+
+	# Fix: https://github.com/adobe/brackets/issues/13731
+	#      https://github.com/adobe/brackets/issues/13738
+	dosym ./libpangoft2-1.0.so.0.4000.5 opt/brackets/libpangoft2-1.0.so.0
 
 	make_desktop_entry \
 		"/usr/bin/${my_pn}" \
