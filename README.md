@@ -1,6 +1,6 @@
-hnaparst
+overlay
 =========
 
-Harold Naparst's Gentoo overlay
+Gentoo user overlay
 
 
