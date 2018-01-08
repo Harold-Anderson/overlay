@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-scheme/guile-2.0.0:12/22[deprecated,regex]
 	dev-scheme/guile-www
 	gnome-base/libgnomecanvas
-	>=net-libs/webkit-gtk-1.2:2
+	net-libs/webkit-gtk:4
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.24:2
 	>=x11-libs/goffice-0.7.0:0.8[gnome]
