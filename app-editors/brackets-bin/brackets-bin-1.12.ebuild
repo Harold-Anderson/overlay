@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -9,18 +9,14 @@ DESCRIPTION="A code editor for HTML, CSS and JavaScript"
 HOMEPAGE="http://brackets.io/"
 
 SRC_URI="
-	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb
-			mirror://debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.5-1_amd64.deb )
-	x86?   ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb
-			mirror://debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.5-1_i386.deb )"
+	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb )
+	x86?   ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb )"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="mirror"
 LICENSE="MIT"
 IUSE="live_preview"
 SLOT="0"
-
-QA_PRESTRIPPED="/opt/brackets/libpangoft2-1.0.so.0.4000.5"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -35,6 +31,7 @@ RDEPEND="${DEPEND}
 	>=media-libs/alsa-lib-1.0.23
 	>=media-libs/fontconfig-2.8.0
 	>=media-libs/freetype-2.3.9
+	net-misc/wget
 	>=net-print/cups-1.4.0
 	>=sys-apps/dbus-1.2.14
 	>=sys-devel/gcc-4.1.1
@@ -66,18 +63,8 @@ src_prepare() {
 	#       The SUID sandbox helper binary was found, but is not configured correctly"
 	chmod 4755 opt/brackets/chrome-sandbox || die "Failed to install!"
 
-	# Fix: https://github.com/adobe/brackets/issues/13731
-	#      https://github.com/adobe/brackets/issues/13738
-	#
-	# You need downgrade x11-libs/pango to 1.40.5 or download libpangoft2-1.0-0_1.40.5-1_****.deb
-	if use amd64; then
-		mv usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.5 opt/brackets/ || die "Failed to install!"
-	elif use x86; then
-		mv usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.4000.5 opt/brackets/ || die "Failed to install!"
-	fi
-
 	# Cleanup
-	rm -rf usr/share/menu usr/lib
+	rm -rf usr/share/menu
 }
 
 src_install() {
@@ -94,10 +81,6 @@ src_install() {
 		target=$(echo ${f} | sed 's/\.[01]d\?$//')
 		[ -f "/usr/lib/${target}" ] && dosym /usr/lib/${target} /opt/brackets/${f} || die "Failed to install!"
 	done
-
-	# Fix: https://github.com/adobe/brackets/issues/13731
-	#      https://github.com/adobe/brackets/issues/13738
-	dosym ./libpangoft2-1.0.so.0.4000.5 opt/brackets/libpangoft2-1.0.so.0 || die "Failed to install!"
 
 	make_desktop_entry \
 		"/usr/bin/${my_pn}" \
