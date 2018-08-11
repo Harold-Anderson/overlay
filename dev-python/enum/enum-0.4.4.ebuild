@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Robust enumerated type support in Python."
-HOMEPAGE="http://pypi.python.org/pypi/enum/"
+HOMEPAGE="https://pypi.python.org/pypi/enum/"
 SRC_URI="mirror://pypi/e/${PN}/${P}.tar.gz"
 
 LICENSE=GPL-2

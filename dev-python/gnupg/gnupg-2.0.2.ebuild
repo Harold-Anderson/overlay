@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Fork of python-gnupg that fixes potential remote execution bug."
-HOMEPAGE="http://pypi.python.org/pypi/gnupg/"
+HOMEPAGE="https://pypi.python.org/pypi/gnupg/"
 SRC_URI="mirror://pypi/g/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

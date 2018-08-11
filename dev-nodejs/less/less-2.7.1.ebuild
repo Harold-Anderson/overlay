@@ -5,7 +5,7 @@
 EAPI=5
 DESCRIPTION="Leaner CSS"
 HOMEPAGE="http://lesscss.org/"
-SRC_URI="http://github.com/${PN}/${PN}.js/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}.js/archive/v${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
