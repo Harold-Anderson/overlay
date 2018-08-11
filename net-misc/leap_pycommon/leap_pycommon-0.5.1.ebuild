@@ -1,8 +1,7 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=7
 PYTHON_COMPAT=( python2_7 )
 
 inherit eutils git-r3 distutils-r1
@@ -18,7 +17,7 @@ SLOT=0
 
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=dev-libs/protobuf-2.4.1[python,${PYTHON_USEDEP}]
+RDEPEND="dev-libs/protobuf
 	dev-python/protobuf-socketrpc[${PYTHON_USEDEP}]
 	dev-python/routes[${PYTHON_USEDEP}]
 	dev-libs/openssl:0

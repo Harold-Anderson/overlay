@@ -20,7 +20,7 @@ SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/protobuf[python,${PYTHON_USEDEP}]
+DEPEND="dev-libs/protobuf
 	${PYTHON_DEPS}"
 
 S="${WORKDIR}/${MY_P}"

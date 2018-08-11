@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>harold@naparst.com</email>
-    <name>Harold Naparst</name>
+  <maintainer type="person">
+    <email>harold@alum.mit.edu</email>
+    <name>Harold Anderson</name>
   </maintainer>
 </pkgmetadata>
